@@ -1,0 +1,85 @@
+{
+    "header": {
+        "theme": {
+            "title": "Light <-> Dark"
+        },
+        "lang": {
+            "title": "En <-> 'ע"
+        },
+        "info": {
+            "title": "Updated {{date}}\nLorem Ipsum has been the industry's standard dummy text"
+        },
+        "print": {
+            "title": "Printable Version.."
+        },
+        "share": {
+            "title": "Share This!",
+            "whatsapp": {
+                "title": "Share via Whatsapp..",
+                "shared_title": "Check That Awesome CV/Portfolio Out:"
+            },
+            "linkedin": {
+                "title": "Share via Linkedin..",
+                "shared_source": "Check That Awesome CV/Portfolio Out:"
+            },
+            "email": {
+                "title": "Share via Email..",
+                "shared_subject": "Check That Out..",
+                "shared_body": "Awesome CV/Portfolio:"
+            }
+        }
+    },
+    "profile": {
+        "name": "Kashan Fadi",
+        "motto": "Software Engineer with a modern Tech Stack and great passion for problem-solving.",
+        "phone": "+972 05480-05480",
+        "phone_title": "call",
+        "email": "kashan.fadi@gmail.com",
+        "email_title": "send an email",
+        "linkedin": "linkedin.com/in/k-fadi",
+        "github": "github.com/kFadi",
+        "visit_title": "visit",
+        "soft_skills": "Interpersonal skills, adaptability, flexibility, active learning and attention to detail.",
+        "languages": "English, Hebrew and Arabic @ high level."
+    },
+    "education": {
+        "john_bryce": {
+            "year": "2022",
+            "name": "John Bryce",
+            "info1": "Full-Stack Development /Java",
+            "info2": "Full training course - 760 academic hours"
+        },
+        "netanya": {
+            "year": "2010-2011",
+            "name": "Netanya Academic",
+            "info1": "Computer Science (B.Sc)",
+            "info2": "graduation"
+        },
+        "technion": {
+            "year": "2000-2002",
+            "name": "Technion",
+            "info1": "Computer Science (B.Sc)",
+            "info2": "start"
+        }
+    },
+    "projects": {
+        "koburger": {
+            "info": "Lorem Ipsum has been the industry's standard dummy text"
+        },
+        "cats_n_toys": {
+            "info": "Lorem Ipsum has been the industry's standard dummy text"
+        },
+        "couponinja": {
+            "info": "Lorem Ipsum has been the industry's standard dummy text"
+        },
+        "taas": {
+            "info": "Lorem Ipsum has been the industry's standard dummy text"
+        },
+        "rick_n_morty": {
+            "info": "Lorem Ipsum has been the industry's standard dummy text"
+        },
+        "currency_exchange": {
+            "info": "Lorem Ipsum has been the industry's standard dummy text"
+        }
+    }
+}

@@ -1,13 +1,291 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ############################################### */
+/* ############################################### */
+
+:root{
+
+  --bg1-from-share: #dfe6e9;
+  --bg2-from-share: #2d3436;
+  --clr-from-share: #f1f1f1;
+  
+  
+  --clr-wht-tr1: rgba(255, 255, 255, 0.101);
+  --clr-wht-tr2: rgba(255, 255, 255, 0.202);
+  --clr-wht: white;
+  --clr-wht-dim: #c1bbbb;
+  --clr-wht-dim2: #999;
+  --clr-wht-dimmer: #6a6666;
+
+  --clr-gry-drk-tr: rgba(34, 34, 34, 0.9);
+  --clr-gry-drk: #222;
+  --clr-gry-drk-react: #282c34;
+  --clr-gry-light: rgba(68, 68, 68, 0.565);
+  --clr-gry-lighter: rgb(205, 205, 205);
+  
+  --clr-ylo: yellow;
+  --clr-orng: #bf6516;
+
+  --clr-blu-lighter:rgb(220, 255, 255);
+  --clr-blu-light: #c8ffff;
+  --clr-blu-react: #61dafb;
+  --clr-blu1: #00b3ff;
+  --clr-blu2: #008bc7;
+  --clr-blu3: #457fb4;
+  --clr-blu4: #20638f;
+
+  --clr-red1: #ff4848;
+  --clr-red2: #de4141;
+  --clr-red3: #962d22;
+
+  --clr-brt0: #ffffff;
+  --clr-brt1: #ededed;
+  --clr-brt2: #aeaeae;
+  --clr-brt3: #818181;
+  
+  --clr-drk0: #1b1b1b;
+  --clr-drk1: #272727;
+  --clr-drk2: #434242;
+  --clr-drk3: #636363;
+
+  /* --tgl: #303136; */
+
+
+  
+  
+  
+  /* - - - */
+  /* - - - */
+  --shd: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  --shd-hvy: 20px 20px 30px rgba(0, 0, 0, 0.3);
+
+  --timing: cubic-bezier(0.075, 0.82, 0.165, 1);
+  
+  --padding: 8%; 
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ############################################### */
+/* ############################################### */
+
+/* body { */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Rubik', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root, .App {
+  height: 100%;
+  width: 100%;
+  /* margin: 0 auto;
+  padding: 0 auto; */
+
+  letter-spacing: 0.015rem;
+}
+
+/* ############################################### */
+/* ############################################### */
+
+.theme-light {
+
+  --clr-vb: var(--clr-blu2);
+  --clr-vb-hvr: var(--clr-red2);
+
+
+  --header-bgclr: var(--clr-brt2);
+  --header_brdr_clr: var(--clr-ylo);
+
+  --tgl-bgclr: var(--clr-brt1);
+  --tgl_lang_icn-clr: var(--clr-brt1);
+  --tgl_lang_icn-bgclr: var(--clr-drk1);
+
+  --share_icon-clr: var(--clr-brt1);
+  --share_icon-bgclr: var(--clr-drk1);
+  --share_social-bgclr: var(--clr-brt1);
+
+  --main-clr: var(--clr-drk1);
+  --main-bg: radial-gradient(circle at center, var(--clr-brt0), var(--clr-brt1) 100%);
+}
+
+.theme-dark {
+
+  --clr-vb: var(--clr-red2);
+  --clr-vb-hvr: var(--clr-blu2);
+
+
+  --header-bgclr: var(--clr-drk2);
+  --header_brdr_clr: var(--clr-ylo);
+
+  --tgl-bgclr: var(--clr-drk1);
+  --tgl_lang_icn-clr: var(--clr-drk1);
+  --tgl_lang_icn-bgclr: var(--clr-brt1);
+
+  --share_icon-clr: var(--clr-drk1);
+  --share_icon-bgclr: var(--clr-brt1);
+  --share_social-bgclr: var(--clr-drk1);
+
+  --main-clr: var(--clr-brt1);
+  --main-bg: radial-gradient(circle at center, var(--clr-drk1), var(--clr-drk0) 100%);
+
+}
+
+/* ############################################### */
+/* ############################################### */
+
+header {
+  width: 100%;
+  background-color: var(--header-bgclr);
+  border-bottom: solid 0.15rem var(--header_brdr_clr);
+}
+
+menu, nav {
+  width: min(50%, 30rem);
+  min-width: 24rem;
+  padding-block: 0.5rem;
+}
+
+menu {
+  /* border-right: solid 0.15rem var(--header_brdr_clr); */
+  padding-right: 2rem;
+}
+
+nav {
+  padding-left: 2rem;
+}
+
+header .icn {
+  width: 2rem;
+  height: 2rem;
+  color: var(--clr-vb);
+  transition: var(--timing) scale 0.4s, rotate 0.5s, opacity 0.5s;
+  cursor: help;
+}
+
+header a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 550;
+  color: var(--clr-vb);
+  transition: var(--timing) scale 0.4s, rotate 0.5s, opacity 0.5s;
+}
+
+header .icn:hover,
+header a:hover {
+  scale: 1.2;
+  rotate: -2deg;
+  color: var(--clr-vb-hvr);
+  opacity: 0.8;
+}
+
+/* ############################################### */
+/* ############################################### */
+section {
+  width: 100%;
+}
+
+main {
+
+  width: 100%;
+  
+  padding-block: 2em;
+  gap: 1.5rem;
+
+  color: var(--main-clr);
+  background: var(--main-bg);
+}
+
+/* ############################################### */
+/* ############################################### */
+
+.flex {
+  display: flex;
+}
+
+/* - - - */
+
+.flx-row {
+  flex-direction: row;
+}
+
+.flx-row-wrap {
+  flex-wrap: wrap;
+}
+
+.flx-col {
+  flex-direction: column;
+}
+
+/* - - - */
+
+.flx-center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* - */
+
+.flx-start {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flx-end {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flx-around {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flx-even {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.flx-btw {
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ############################################### */
+
+.overflow-y-scroll {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  min-height: 0px;
+} 
+
+/* .overflow-x-scroll {
+  max-width: 90%;
+  white-space: nowrap;
+  overflow-x: scroll;
+}  */
+
+/* .overflow-x-limit{
+  max-width:95%;
+  overflow: hidden; 
+  white-space: nowrap;
+  text-overflow: ellipsis;
+} */
+
+/* - - - */
+
+.rtl {
+  direction: rtl;
+  background-color: red;
+}
+
+/* ############################################### */
+/* ############################################### */
+
+
+
