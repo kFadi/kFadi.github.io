@@ -27,6 +27,12 @@
                 "shared_subject": "Check That Out..",
                 "shared_body": "Awesome CV/Portfolio:"
             }
+        },
+        "nav": {
+            "profile": "Profile",
+            "education": "Education",
+            "experience": "Experience",
+            "projects": "Projects"
         }
     },
     "profile": {

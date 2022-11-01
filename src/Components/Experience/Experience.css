@@ -1,0 +1,69 @@
+.experience {
+    padding: 10vw;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #c8ffff;
+}
+
+.experience div {
+    border: 0.2rem solid purple;
+    background-color: lightgoldenrodyellow;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.experience div :first-child {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+#exp-java {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+#exp-front {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+}
+
+#exp-orm {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#exp-dbms {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#exp-package {
+    grid-column: 2 / span 2;
+    grid-row: 3;
+}
+
+#exp-arch {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#exp-http {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#exp-ides {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#exp-more {
+    grid-column: 4;
+    grid-row: 3;
+}

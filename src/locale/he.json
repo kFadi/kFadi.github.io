@@ -24,6 +24,12 @@
                 "shared_subject": "בדוק את זה..",
                 "shared_body": "קורות-חיים/תיק-עבודות:"
             }
+        },
+        "nav": {
+            "profile": "פרופיל",
+            "education": "השכלה",
+            "experience": "ניסיון",
+            "projects": "פרויקטים"
         }
     },
     "profile": {

@@ -66,15 +66,6 @@
 /* ############################################### */
 /* ############################################### */
 
-/* body { */
-html {
-  scroll-behavior: smooth;
-  font-family: 'Rubik', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -90,13 +81,26 @@ html, body, #root, .App {
   letter-spacing: 0.015rem;
 }
 
+/* body { */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Rubik', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
 /* ############################################### */
 /* ############################################### */
 
 .theme-light {
 
-  --clr-vb: var(--clr-blu2);
-  --clr-vb-hvr: var(--clr-red2);
+  
+  
+  
+  /* ------- */
+  --clr-acc1: var(--clr-blu2);
+  --clr-acc2: var(--clr-red2);
 
 
   --header-bgclr: var(--clr-brt2);
@@ -116,8 +120,13 @@ html, body, #root, .App {
 
 .theme-dark {
 
-  --clr-vb: var(--clr-red2);
-  --clr-vb-hvr: var(--clr-blu2);
+  
+  
+  
+  
+  /* ------- */
+  --clr-acc1: var(--clr-red2);
+  --clr-acc2: var(--clr-blu2);
 
 
   --header-bgclr: var(--clr-drk2);
@@ -142,45 +151,70 @@ html, body, #root, .App {
 header {
   width: 100%;
   background-color: var(--header-bgclr);
-  border-bottom: solid 0.15rem var(--header_brdr_clr);
+  gap: 6rem;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr;
 }
 
 menu, nav {
+  grid-column: 1fr;
   width: min(50%, 30rem);
-  min-width: 24rem;
+  /* min-width: 24rem; */
   padding-block: 0.5rem;
+  /* gap: 2.5rem; */
 }
 
-menu {
-  /* border-right: solid 0.15rem var(--header_brdr_clr); */
-  padding-right: 2rem;
-}
-
-nav {
-  padding-left: 2rem;
-}
-
-header .icn {
+menu .icn {
   width: 2rem;
   height: 2rem;
-  color: var(--clr-vb);
+  color: var(--clr-acc1);
   transition: var(--timing) scale 0.4s, rotate 0.5s, opacity 0.5s;
   cursor: help;
 }
 
-header a {
-  font-size: 1.2rem;
+nav a {
+  position: relative;
+  margin-right: 2.5rem;
   text-decoration: none;
-  font-weight: 550;
-  color: var(--clr-vb);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: var(--clr-acc1);
+  /* transition: 0.5s ease; */
   transition: var(--timing) scale 0.4s, rotate 0.5s, opacity 0.5s;
+}
+nav:is(.rtl) a {
+  margin-right: 0;
+  margin-left: 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+nav a::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 0.15rem;
+  bottom: -0.15rem;
+  background: var(--clr-acc2);
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+nav:is(.rtl) a::before {
+  transform-origin: right;
+}
+
+header a:hover::before{
+  transform: scale(1);
 }
 
 header .icn:hover,
 header a:hover {
   scale: 1.2;
-  rotate: -2deg;
-  color: var(--clr-vb-hvr);
+  font-weight: 450;
+
+  /* rotate: -1deg; */
+  color: var(--clr-acc2);
   opacity: 0.8;
 }
 
@@ -281,11 +315,14 @@ main {
 
 .rtl {
   direction: rtl;
-  background-color: red;
+  /* background-color: red; */
 }
 
 /* ############################################### */
 /* ############################################### */
+
+
+
 
 
 

@@ -10,16 +10,8 @@
     transition: .3s linear;
 }
 
-.share:hover {
-    transform: scale(1.05);
-    /* cursor:none; */
-
-    box-shadow: var(--shd);
-}
-
 .share-icon {
     cursor: pointer;
-
 
     font-size: small;
     letter-spacing: 0.05em;
@@ -36,13 +28,6 @@
     border-radius: 30px;
 }
 
-.share:hover .share-icon {
-    /* transform: scale(0.9); */
-
-    transform: translateX(-101%);
-    transition-delay: .3s;
-}
-
 .share-social {
     flex: 1;
     /* font-size: 26px; */
@@ -54,11 +39,6 @@
     margin-top: 0.3em;
     /* justify-self: center; */
     margin-inline: 0.3em;
-}
-
-.share:hover .share-social {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 .share-whatsapp {
@@ -75,15 +55,63 @@
 
 .share-social-icon {
     transition: 0.4s;
-    /* transition: var(--timing) scale 0.4s, rotate 0.5s, opacity 0.5s; */
 }
 
-.share-social-icon:hover {
-    opacity: 0.9;
-    transform: scale(1.1);
+/* * * * * * * * * * * * * * */
+
+@media (hover: hover){
+
+    .share:hover {
+        transform: scale(1.05);
+        /* cursor:none; */
+    
+        box-shadow: var(--shd);
+    }
+
+    .share:hover .share-icon {
+        /* transform: scale(0.9); */
+    
+        transform: translateX(-101%);
+        transition-delay: .3s;
+    }
+
+    .share:hover .share-social {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .share-social-icon:hover {
+        opacity: 0.9;
+        transform: scale(1.1);
+    }
 }
 
-.share-social-icon:hover .share-social-icon:not(:hover) {
-    opacity: 0.7;
-    transform: scale(0.9);
+/* * * * * * * * * * * * * * */
+
+@media (hover: none){
+
+    .share:focus {
+        transform: scale(1.05);
+        /* cursor:none; */
+    
+        box-shadow: var(--shd);
+    }
+
+    .share:hover .share-icon {
+        /* transform: scale(0.9); */
+    
+        transform: translateX(-101%);
+        transition-delay: .3s;
+    }
+
+    .share:hover .share-social {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .share-social-icon:hover {
+        opacity: 0.9;
+        transform: scale(1.1);
+    }
+
 }
