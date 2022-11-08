@@ -1,12 +1,9 @@
-.Toggle {
-	
-}
 
 .tgl-wrp {
     --tgl-wrp-w: 3.5em;
-    --tgl-wrp-h: 2em;
+    --tgl-wrp-h: var(--header-item-height);
     --tgl-icn-sz: 1.4em;
-    --tgl-sld-ofst: 0.3em;
+    --tgl-sld-ofst: var(--header-item-offset);
     
     position: relative;
     width: var(--tgl-wrp-w);

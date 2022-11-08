@@ -4,7 +4,7 @@
             "title": "Light <-> Dark"
         },
         "lang": {
-            "title": "En <-> 'ע"
+            "title": "Language"
         },
         "info": {
             "title": "Updated {{date}}\nLorem Ipsum has been the industry's standard dummy text"
@@ -44,7 +44,7 @@
         "email_title": "send an email",
         "linkedin": "linkedin.com/in/k-fadi",
         "github": "github.com/kFadi",
-        "visit_title": "visit",
+        "browse_title": "browse",
         "soft_skills": "Interpersonal skills, adaptability, flexibility, active learning and attention to detail.",
         "languages": "English, Hebrew and Arabic @ high level."
     },

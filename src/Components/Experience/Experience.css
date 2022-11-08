@@ -1,69 +1,449 @@
 .experience {
-    padding: 10vw;
+    
+    /* "imported".. */
+    --shd-clr: var(--ex-shd-clr);
+    /*  */
+
+    --ex-size: 3rem;
+    /* * */
+    /* margin-inline: 8vw; */
+    width: min(92vw, 70rem);
+
+    padding: 2rem;
+    /* border-radius: 0.8rem;; */
     display: grid;
-    gap: 0.5rem;
+    left: 50%;
+    gap: 1.3rem;
     grid-template-columns: repeat(4, 1fr);
-    background-color: #c8ffff;
 }
 
-.experience div {
-    border: 0.2rem solid purple;
-    background-color: lightgoldenrodyellow;
+/* ------------------- */
+/* ------------------- */
 
+/* __ group __ */
+.experience > div {
+    border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
+    gap: 0.7rem;
+    padding: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.5rem var(--shd-clr);
 }
 
-.experience div :first-child {
-    font-size: 1.2rem;
+/* __ line __ */
+.ex-line {
+    height: var(--ex-size);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+}
+.ex-line:is(.higher) {
+    height: calc(var(--ex-size)/2);
+    margin-bottom: calc(var(--ex-size)/2);
+}
+.ex-line:is(.show_when_not_phone),
+.ex-line:is(.show_when_tablet_or_desktop),
+.ex-line:is(.show_when_desktop_or_big_desktop),
+.ex-line:is(.show_when_not_big_desktop) {
+    display:flex;
+}
+.ex-line:is(.show_when_phone),
+.ex-line:is(.show_when_not_tablet_nor_desktop),
+.ex-line:is(.show_when_not_desktop_nor_big_desktop),
+.ex-line:is(.show_when_big_desktop) {
+    display: none;
+}
+
+/* __ title __ */
+.ex-line:first-child {
+    font-size: 1.6rem;
     font-weight: 500;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
-#exp-java {
+/* __ txt __ */
+.ex-line > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+}
+.ex-line > span > small {
+    font-size: 1.3rem;
+    opacity: 0.7;
+    font-weight: 300;
+    margin-inline: 0.1rem;
+}
+.ex-line > .ex-line > span > small:is(:first-child) {
+    margin-left: 0.5rem;
+}
+.ex-line > span > strong {
+    font-size: 1.7rem;
+    opacity: 0.7;
+    font-weight: 300;
+    margin-left: 0.4rem;
+    margin-right: 0.2rem;
+}
+
+/* __ img __ */
+.ex-line img {
+    
+    margin-right: 0.25rem;
+
+    /* width: var(--ex-size);
+    height: var(--ex-size); */
+    min-width: var(--ex-size);
+    max-width: var(--ex-size);
+    min-height: var(--ex-size);
+    max-height: var(--ex-size);
+    
+    /* box-sizing: content-box; */
+    /* padding: 0.05rem; */
+        
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    place-items: center;
+    /* place-content: center; */
+    
+    /* object-fit:cover; */
+
+    border-radius: 0.25rem;
+    box-shadow: 0.1rem 0.1rem 0.2rem var(--shd-clr);
+    
+    /* overflow: hidden; */
+}
+.experience img:is(.cr) {
+    border-radius: 50%;
+}
+.experience img:is(.pd) {
+    padding: 0.2rem;
+}
+
+/* ------------------- */
+
+#ex-java {
     grid-column: 1 / span 2;
     grid-row: 1;
 }
 
-#exp-front {
-    grid-column: 4;
-    grid-row: 1 / span 2;
-}
-
-#exp-orm {
+#ex-orm {
     grid-column: 1;
     grid-row: 2;
 }
 
-#exp-dbms {
+#ex-dbms {
     grid-column: 2;
     grid-row: 2;
 }
 
-#exp-package {
-    grid-column: 2 / span 2;
-    grid-row: 3;
+#ex-front {
+    grid-column: 4;
+    grid-row: 1 / span 3;
 }
 
-#exp-arch {
+#ex-arch {
     grid-column: 3;
     grid-row: 1;
 }
 
-#exp-http {
+#ex-http {
     grid-column: 3;
-    grid-row: 2;
+    grid-row: 2 / span 2;
 }
 
-#exp-ides {
+#ex-ides {
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 3 / span 2;
 }
 
-#exp-more {
-    grid-column: 4;
-    grid-row: 3;
+#ex-package {
+    grid-column: 2;
+    grid-row: 3 / span 2;
+}
+
+#ex-more {
+    grid-column: 3 / span 2;
+    grid-row: 4;
+}
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@ phone */
+@media (max-width: 599px) {
+
+    .experience{
+        /* --ex-size: 2.5rem; */
+        /* margin-inline: 0vw; */
+        /* width: min(92vw, 75rem); */
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* ------------------- */
+
+    /* __ group __ */
+    .experience > div {
+        /* gap: 0.3rem; */
+        padding: 0.7rem;
+    }
+
+    /* __ line __ */
+    .ex-line:is(.show_when_phone),
+    .ex-line:is(.show_when_not_tablet_nor_desktop),
+    .ex-line:is(.show_when_not_desktop_nor_big_desktop),
+    .ex-line:is(.show_when_not_big_desktop) {
+        display:flex;
+    }
+    .ex-line:is(.show_when_not_phone),
+    .ex-line:is(.show_when_tablet_or_desktop),
+    .ex-line:is(.show_when_desktop_or_big_desktop),
+    .ex-line:is(.show_when_big_desktop) {
+        display: none;
+    }
+
+    /* ------------------- */
+
+    #ex-java {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    #ex-orm {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    #ex-dbms {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    #ex-front {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    
+    #ex-arch {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    
+    #ex-http {
+        grid-column: 1;
+        grid-row: 6;
+    }
+    
+    #ex-ides {
+        grid-column: 1;
+        grid-row: 7;
+    }
+    
+    #ex-package {
+        grid-column: 1;
+        grid-row: 8;
+    }
+    
+    #ex-more {
+        grid-column: 1;
+        grid-row: 9;
+    }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@ tablet */
+@media (min-width: 600px) and (max-width: 1199px) {
+
+    .experience{
+        margin-inline: 2vw;
+        width: min(98vw, 50rem);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    /* ------------------- */
+
+    /* __ group __ */
+    .experience > div {
+        /* gap: 0.3rem; */
+        padding: 0.5rem;
+    }
+
+    /* __ line __ */   
+    .ex-line:is(.show_when_not__phone),
+    .ex-line:is(.show_when_tablet_or_desktop),
+    .ex-line:is(.show_when_not_desktop_nor_big_desktop),
+    .ex-line:is(.show_when_not_big_desktop) {
+        display:flex;
+    }
+    .ex-line:is(.show_when_phone),
+    .ex-line:is(.show_when_not_tablet_nor_desktop),
+    .ex-line:is(.show_when_desktop_or_big_desktop),
+    .ex-line:is(.show_when_big_desktop) {
+        display: none;
+    }
+
+    /* ------------------- */
+
+    /* #ex-java {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+    
+    #ex-orm {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    #ex-dbms {
+        grid-column: 2;
+        grid-row: 2;
+    } */
+    
+    #ex-front {
+        grid-column: 1;
+        grid-row: 3 / span 2;
+    }
+
+    #ex-arch {    
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    #ex-http {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    #ex-ides {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    
+    #ex-package {
+        grid-column: 2;
+        grid-row: 5;
+
+    }
+    
+    #ex-more {
+        grid-column: 1 / span 2;
+        grid-row: 6;
+    }
+
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@ big desktop */
+@media (min-width: 1600px) {
+
+    .experience{
+        /* margin: minmax(16vw, 18rem); */
+        width: 80rem;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.4rem;
+    }
+
+    /* ------------------- */
+
+    /* __ group __ */
+    .experience > div {
+        /* gap: 0.3rem; */
+        padding: 0.5rem;
+    }
+
+    /* __ line __ */
+    .ex-line:is(.show_when_not_phone),
+    .ex-line:is(.show_when_not_tablet_nor_desktop),
+    .ex-line:is(.show_when_desktop_or_big_desktop),
+    .ex-line:is(.show_when_big_desktop) {
+        display:flex;
+    }
+    .ex-line:is(.show_when_phone),
+    .ex-line:is(.show_when_tablet_or_desktop),
+    .ex-line:is(.show_when_not_desktop_nor_big_desktop),
+    .ex-line:is(.show_when_not_big_desktop) {
+        display: none;
+    }
+
+    /* ------------------- */
+
+    #ex-java {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+    
+    #ex-orm {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    
+    #ex-dbms {
+        grid-column: 4;
+        grid-row: 1;
+    }
+    
+    #ex-front {
+        grid-column: 4 / span 2;
+        grid-row: 2 / span 2;
+    }
+    
+    #ex-arch {
+        grid-column: 5;
+        grid-row: 1;
+    }
+    
+    #ex-http {
+        grid-column: 3;
+        grid-row: 2 / span 2;
+    }
+    
+    #ex-ides {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    #ex-package {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    #ex-more {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+}
+
+/* ########################## */
+/* ########################## */
+/* ##  devices that a mouse is their primary pointing device ( >> can hover ) */
+@media (pointer: fine) {
+
+    .experience > div,
+    .ex-line img {
+        transition: .3s ease;
+    }
+
+    .experience > div:hover {
+        transform: scale(1.05);
+        box-shadow: 0.1rem 0.1rem 0.5rem 0.5rem var(--shd-clr);
+    }
+    .experience:has(>div:hover) >div:not(:hover) {
+        opacity: 0.7;
+        transform: scale(0.9);
+    }
+
+    .ex-line img:hover {
+        transform: scale(1.1);
+        box-shadow: 0.15rem 0.15rem 0.25rem 0.1rem var(--shd-clr);
+    }
 }

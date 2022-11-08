@@ -1,6 +1,6 @@
 .share {
     width: 7em;
-    height: 2em;
+    height: var(--header-item-height);
     background: var(--share_social-bgclr);
     /* gap: 10px; */
     border-radius: 30px;
@@ -58,18 +58,21 @@
 }
 
 /* * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * */
 
-@media (hover: hover){
+/* @media (hover: hover){
 
     .share:hover {
         transform: scale(1.05);
-        /* cursor:none; */
+        /* cursor:none; 
     
         box-shadow: var(--shd);
     }
 
     .share:hover .share-icon {
-        /* transform: scale(0.9); */
+        /* transform: scale(0.9); 
     
         transform: translateX(-101%);
         transition-delay: .3s;
@@ -84,21 +87,21 @@
         opacity: 0.9;
         transform: scale(1.1);
     }
-}
+} */
 
 /* * * * * * * * * * * * * * */
 
-@media (hover: none){
+/* @media (hover: none){
 
     .share:focus {
         transform: scale(1.05);
-        /* cursor:none; */
+        /* cursor:none; 
     
         box-shadow: var(--shd);
     }
 
     .share:hover .share-icon {
-        /* transform: scale(0.9); */
+        /* transform: scale(0.9); 
     
         transform: translateX(-101%);
         transition-delay: .3s;
@@ -114,4 +117,34 @@
         transform: scale(1.1);
     }
 
+} */
+
+/* * * * * * * * * * * * * * */
+
+.share:hover,
+.share:active {
+    transform: scale(1.05);
+    /* cursor:none; */
+
+    box-shadow: var(--shd);
+}
+
+.share:hover .share-icon,
+.share:active .share-icon {
+    /* transform: scale(0.9); */
+
+    transform: translateX(-101%);
+    transition-delay: .3s;
+}
+
+.share:hover .share-social,
+.share:active .share-social {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.share-social-icon:hover,
+.share-social-icon:active {
+    opacity: 0.9;
+    transform: scale(1.1);
 }

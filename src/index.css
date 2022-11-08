@@ -61,6 +61,9 @@
   
   --padding: 8%; 
 
+  --header-item-height: 2rem;
+  --header-item-offset: 0.3rem;
+
 }
 
 /* ############################################### */
@@ -95,7 +98,8 @@ html {
 
 .theme-light {
 
-  
+
+  --ex-shd-clr: rgba(0, 0, 0, 0.2);
   
   
   /* ------- */
@@ -121,7 +125,7 @@ html {
 .theme-dark {
 
   
-  
+  --ex-shd-clr: rgba(255, 255, 255, 0.2);
   
   
   /* ------- */
@@ -313,16 +317,40 @@ main {
 
 /* - - - */
 
+/* ############################################### */
+/* ############################################### */
+
 .rtl {
   direction: rtl;
   /* background-color: red; */
 }
 
+.ar {
+  font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
 /* ############################################### */
 /* ############################################### */
 
+#experience {
+  display: grid;
+  place-items: center;
+}
 
 
 
-
-
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
+@media (prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+      transition-delay: 0ms !important;
+  }
+}

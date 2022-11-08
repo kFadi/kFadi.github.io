@@ -9,10 +9,12 @@ import { useTranslation} from 'react-i18next';
 import Toggle, { ToggleType } from './Components/Toggle/Toggle';
 import Share from './Components/Share/Share';
 
-import { RiFileInfoFill } from 'react-icons/ri';
+import { RiArrowDropDownLine, RiFileInfoFill } from 'react-icons/ri';
 import { BsPrinterFill } from 'react-icons/bs';
+import { GrLanguage } from "react-icons/gr";
 import { spawn } from 'child_process';
 import Experience from './Components/Experience/Experience';
+import Lang from './Components/Lang/Lang';
 
 
 
@@ -24,7 +26,8 @@ function App() {
   const [t, i18n ] = useTranslation();
 
   const handleChangeTheme = (chkd: boolean) => { setIsDark(chkd) }
-  const handleChangeLang = (chkd: boolean) => { (chkd? i18n.changeLanguage("he"):i18n.changeLanguage("en"))}
+  // const handleChangeLang = (chkd: boolean) => { (chkd? i18n.changeLanguage("he"):i18n.changeLanguage("en"))}
+  const handleChangeLang = (lng: string) => {( (lng==="en")? i18n.changeLanguage("en"):( (lng==="he")? i18n.changeLanguage("he"):i18n.changeLanguage("ar") ) )}
 
 
   
@@ -59,13 +62,16 @@ function App() {
 
         <menu className="flex flx-row flx-center">
           <Toggle type={ToggleType.THEME} handleChange={handleChangeTheme}/>
-          <Toggle type={ToggleType.LANG} handleChange={handleChangeLang}/>
-          <RiFileInfoFill className={"icn" + (i18n.language==="he"? " rtl":"")}  title={t("header.info.title",{date})}/>
+          {/* <Toggle type={ToggleType.LANG} handleChange={handleChangeLang}/> */}
+          
+          <Lang handleChange={handleChangeLang}/>
+
+          <RiFileInfoFill className={"icn" + (i18n.language!=="en"? " rtl":"")}  title={t("header.info.title",{date})}/>
           <BsPrinterFill className="icn" title={t("header.print.title")}/>
           <Share/>
         </menu>
         
-        <nav className={"flex flx-row flx-center" + (i18n.language==="he"? " rtl":"")}>
+        <nav className={"flex flx-row flx-center" + (i18n.language!=="en"? " rtl":"")}>
           <a href="#profile">{t("header.nav.profile")}</a>
           <a href="#education">{t("header.nav.education")}</a>
           <a href="#experience">{t("header.nav.experience")}</a>

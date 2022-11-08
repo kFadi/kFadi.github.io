@@ -1,0 +1,141 @@
+.lang {
+    /* background-color: blue; */
+    --sz: var(--header-item-height);
+    --pd: var(--header-item-offset);
+    position: relative;
+	
+}
+
+.lang-btn {
+    /* width: calc(var(--sz) *5); */
+    height: var(--sz);
+    display: flex;
+    align-items: center;
+    gap: var(--pd);
+}
+
+.lang-btn:is(.en)::before {
+    content: 'E';
+}
+.lang-btn:is(.he)::before {
+    content: 'ע';
+}
+.lang-btn:is(.ar)::before {
+    content: 'ع';
+}
+.lang-btn::before {
+    /* position: absolute; */
+    width: 1.5rem;
+    height: 1.5rem;
+    /* font-size: 1.4rem; */
+    background-color: aqua;
+}
+.lang-icn1 {
+    width: calc(var(--sz) - 0.75 * var(--pd));
+    height: calc(var(--sz) - 0.75 * var(--pd));
+}
+.lang-icn2 {
+    width: calc(var(--sz) * 0.5);
+    height: calc(var(--sz) * 0.5);
+}
+
+.lang:has(.lang-btn:focus) .lang-list,
+.lang:has(.lang-select-btn:focus) .lang-list {
+    /* opacity: 1; */
+    /* visibility:visible; */
+    display: flex;
+}
+.lang-list {
+    position: absolute;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--pd);
+    /* opacity: 0; */
+    /* visibility:hidden; */
+
+}
+
+.lang-select-btn {
+    /* display: grid;
+    place-items: center; */
+}
+
+
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+.lang-label {
+    position: relative;
+    height: var(--sz);
+    width: var(--sz);
+    display: grid;
+    place-items: center;
+    /* color: rebeccapurple; */
+    /* place-content: center; */
+    
+    /* background-color: aqua; */
+
+    margin-inline: 3rem;
+}
+.lang-label:is(.en)::after {
+    content: 'E';
+}
+.lang-label:is(.he)::after {
+    content: 'ע';
+}
+.lang-label:is(.ar)::after {
+    content: 'ع';
+}
+.lang-label::after {
+    position: absolute;
+    /* width: 1.5rem;
+    height: 1.5rem; */
+    font-size: 1.4rem;
+    top: 0rem;
+    left:var(--sz);
+}
+
+.lang-icn111 {
+    /* position: absolute; */
+    width: calc(var(--sz) - 0.75 * var(--pd));
+    height: calc(var(--sz) - 0.75 * var(--pd));
+    /* color: rebeccapurple; */
+}
+
+.lang-icn222 {
+    position: absolute;
+    width: calc(var(--sz) * 0.5);
+    height: calc(var(--sz) * 0.5);
+    bottom: calc(var(--pd) * -1);
+    left:var(--sz);
+    /* display: grid;
+    place-items: center; */
+    /* background-color: rgba(255, 192, 203, 0.625); */
+    /* z-index: 1; */
+}
+/* #lang-icn3 {
+    position: absolute;
+    left:2rem;
+    display: grid;
+    place-items: center;
+} */
+/* #lang-icn3 > img {
+    width: 1.5rem;
+    height: 1.5rem;
+    
+} */
+
+
+.lang-select {
+    position: absolute;
+
+    opacity: 0;
+}
