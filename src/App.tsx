@@ -1,20 +1,27 @@
 
 import './App.css';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import './locale/config';
 import { useTranslation} from 'react-i18next';
 
-import Toggle, { ToggleType } from './Components/Toggle/Toggle';
+import Theme from './Components/Theme/Theme';
 import Share from './Components/Share/Share';
 
-import { RiArrowDropDownLine, RiFileInfoFill } from 'react-icons/ri';
-import { BsPrinterFill } from 'react-icons/bs';
-import { GrLanguage } from "react-icons/gr";
+import { RiArrowDropDownLine, RiFileInfoFill, RiMenu4Fill, RiMenuFill } from 'react-icons/ri';
+import { BsChevronCompactDown, BsPrinterFill } from 'react-icons/bs';
+import { GrFormNext, GrFormPrevious, GrLanguage, GrMenu, GrNavigate } from "react-icons/gr";
+import { FiChevronLeft, FiChevronRight, FiSettings } from "react-icons/fi";
+import { VscSettingsGear, VscSettings } from "react-icons/vsc";
+import { SlOptionsVertical } from "react-icons/sl";
 import { spawn } from 'child_process';
+import { GoSettings } from "react-icons/go";
 import Experience from './Components/Experience/Experience';
 import Lang from './Components/Lang/Lang';
+import Dropdown from './Components/Dropdown/Dropdown';
+import { FaGlobe } from 'react-icons/fa';
+import { BiLogOut } from 'react-icons/bi';
 
 
 
@@ -23,55 +30,45 @@ function App() {
 
   const date = "01.11.2022";
   const [isDark,setIsDark] = useState<boolean>(false);
+  const [openMenu,setOpenMenu] = useState<boolean>(false);
+  const [openNav,setOpenNav] = useState<boolean>(false);
   const [t, i18n ] = useTranslation();
 
   const handleChangeTheme = (chkd: boolean) => { setIsDark(chkd) }
-  // const handleChangeLang = (chkd: boolean) => { (chkd? i18n.changeLanguage("he"):i18n.changeLanguage("en"))}
-  const handleChangeLang = (lng: string) => {( (lng==="en")? i18n.changeLanguage("en"):( (lng==="he")? i18n.changeLanguage("he"):i18n.changeLanguage("ar") ) )}
+
+  useEffect (() => {
+    document.title =t("app.title");
+  },[i18n.language])
 
 
-  
+  useEffect(()=>{
+    // console.log("openMenu: " + {openMenu} + "   ///   openNav: " + {openNav});
+    {console.log("openMenu: " + openMenu + "   ///   openNav: " + openNav);}
 
-
-  // const exp_keys = ["java", "front", "orm", "dbms", "package", "ides", "arch", "http", "more"];
-  // const exp_map = new Map<string, string[]>([ 
-  //   ["java", ["Java 11", "Spring 5 (Core/Boot/Data/Web)", "Spring Cloud Microservices"]],
-  //   ["front", ["Frontend", "HTML (5)", "CSS(3)", "Javascript (JS)", "Typescript (TS)", "REACT.js (18)", "Redux"]],
-  //   ["orm", ["ORM", "JPA (Hibernate)"]],
-  //   ["dbms", ["DBMS", "MySQL (+Workbench)"]],
-  //   ["package", ["Package Management tools", "maven", "npm"]],
-  //   ["ides", ["IDEs", "IntelliJ", "VS Code"]],
-  //   ["arch", ["Architectural", "REST", "MVC"]],
-  //   ["http", ["HTTP Clients", "Postman", "Swagger", "RestTemplate"]],
-  //   ["more", ["More", "GitHub", "Docker", "GCP", ".."]]
-  // ]);
-
-  // const xp = {"Java 11", "Spring 5 (Core/Boot/Data/Web)", "Spring Cloud Microservices" };
-
-
-          // <CardSk title="Architectural" line1="REST" line2="MVC"/>
-          // <CardSk title="HTTP Clients" line1="Postman, Swagger" line2="RestTemplate"/>
-          // <CardSk title="More" line1="GitHub, Docker" line2="GCP.."/>
-
-
+  },[openMenu, openNav])
 
   return (
-    <div className={"App flex flx-col flx-start theme-" + ((isDark)?"dark":"light")}>
+    <div className={"App theme-" + ((isDark)?"dark":"light")}>
 
-      <header /*className="flex flx-row flx-center"*/>
+      <header>
 
-        <menu className="flex flx-row flx-center">
-          <Toggle type={ToggleType.THEME} handleChange={handleChangeTheme}/>
-          {/* <Toggle type={ToggleType.LANG} handleChange={handleChangeLang}/> */}
-          
-          <Lang handleChange={handleChangeLang}/>
-
-          <RiFileInfoFill className={"icn" + (i18n.language!=="en"? " rtl":"")}  title={t("header.info.title",{date})}/>
-          <BsPrinterFill className="icn" title={t("header.print.title")}/>
+        <menu className={openMenu? "show":""}>
+          <Theme handleChange={handleChangeTheme}/>
+          <Lang/>
+          <RiFileInfoFill className={"menu-icn" + (i18n.language!=="en"? " rtl":"")}  title={t("header.info.title",{date})}/>
+          <BsPrinterFill className="menu-icn" title={t("header.print.title")}/>
           <Share/>
         </menu>
+        <div className="mid-menu" onClick={()=>setOpenMenu(!openMenu)} title="">
+          <GrFormPrevious className="mid-menu-icn1"/>
+          <VscSettings className="mid-menu-icn2"/>
+        </div>
         
-        <nav className={"flex flx-row flx-center" + (i18n.language!=="en"? " rtl":"")}>
+        <div className="mid-nav" onClick={()=>setOpenNav(!openNav)} title="">
+          <GrMenu className="mid-nav-icn1"/>
+          <GrFormNext className="mid-nav-icn2"/>
+        </div>        
+        <nav className={  (openNav? "show":"") + ((i18n.language==="he")? "rtl":((i18n.language==="ar")? "rtl ar":""))}>
           <a href="#profile">{t("header.nav.profile")}</a>
           <a href="#education">{t("header.nav.education")}</a>
           <a href="#experience">{t("header.nav.experience")}</a>
@@ -83,7 +80,7 @@ function App() {
       <main>
 
         <section id='profile'>
-
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita ea dolorem placeat quam, obcaecati nemo nesciunt. Possimus odit cupiditate tenetur, dicta alias consequatur autem blanditiis perferendis amet impedit sit!
         </section>
 
         <section id='education'>
@@ -92,22 +89,11 @@ function App() {
         
         <section id='experience'>
           <Experience/>
-          {/* {(
-            exp_keys.map(k =>
-                              <div id={k}>
-                                  {
-                                    exp_map.get(k)?.map(s => <span>{s}</span>)
-                                  }
-                              </div>
-                        )
-          )} */}
-
         </section>
+
         <section id='projects'>
 
         </section>
-
-
       </main>
 
     </div>

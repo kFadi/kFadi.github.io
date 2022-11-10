@@ -1,63 +1,39 @@
-import img_en from "../../assets/images/language/en.png";
-import img_he from "../../assets/images/language/he.png";
-import img_ar from "../../assets/images/language/ar.png";
-import { GrLanguage } from "react-icons/gr";
-import { RiArrowDropDownLine } from "react-icons/ri";
-import "./Lang.css";
+import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { BiChevronDown } from "react-icons/bi";
 import { FaGlobe } from "react-icons/fa";
-import { BsChevronCompactDown } from "react-icons/bs";
-import { useState } from "react";
+import useClickOutside from "../../custom/useClickOutside";
+import "./Lang.css";
 
-interface LangProps {
-    handleChange: Function;
-}
 
-function Lang(props: LangProps): JSX.Element {
+function Lang(): JSX.Element {
 
-    const [showList,setShowList] = useState<boolean>(false);
+    const [open,setOpen] = useState<boolean>(false);
     const [t, i18n ] = useTranslation();
-
-    const selected = (lng: string) => {
-        // setShowList(false);
-        props.handleChange(lng);
-    }
     
+    const langRef = useRef<any>(null);
+    useClickOutside(langRef,()=>{ if (open) setOpen(false) });
+    
+    const changeLang = (lng: string) => {
+        setOpen(false);
+        i18n.changeLanguage(lng)
+    }
+        
     return (
-        <div className="lang">
-            <button className={"lang-btn " + ((i18n.language==="en")? "en":((i18n.language==="he")? "he":"ar"))} title={t("header.lang.title")} onClick={() => setShowList(!showList)}>
-                <FaGlobe className="lang-icn1"/>
-                <BsChevronCompactDown className="lang-icn2"/>
-            </button>
+        <div className="lang" ref={langRef}>
             
-            {/* <div className={"lang-list " + (showList? "yes":"no")}> */}
-            <div className="lang-list">
-                { (i18n.language!=="en") && (<button className="lang-select-btn" onClick={() => selected("en")}>English</button>) }
-                { (i18n.language!=="he") && (<button className="lang-select-btn"  onClick={() => selected("he")}>עברית</button>) }
-                { (i18n.language!=="ar") && (<button className="lang-select-btn ar"  onClick={() => selected("ar")}>العربية</button>) }
+            <div className={"lang-trigger"} title={t("header.lang.title")} onClick={() => setOpen(!open)}>
+                <FaGlobe className="lang-icn1"/>
+                <div className={"lang-icn2  " + i18n.language}>
+                    <BiChevronDown/>
+                </div>
             </div>
             
-            
-            {/* {
-                (showList)
-                &&
-                (
-                    <div className="lang-list">
-                        { (i18n.language!=="en") && (<button className="lang-select-btn" onClick={() => selected("en")}>English</button>) }
-                        { (i18n.language!=="he") && (<button className="lang-select-btn"  onClick={() => selected("he")}>עברית</button>) }
-                        { (i18n.language!=="ar") && (<button className="lang-select-btn ar"  onClick={() => selected("ar")}>العربية</button>) }
-                    </div>
-                )
-            } */}
-            {/* <label htmlFor="lang-select" className={"lang-label " + i18n.language}>
-                <FaGlobe className="lang-icn1"/>
-                <BsChevronCompactDown className="lang-icn2"/>
-            </label>
-            <select name="lang" className="lang-select" onChange={e => props.handleChange(e.target.value)}>
-                <option value="en" className="lang-op-en" disabled={i18n.language==="en"} selected>English</option>
-                <option value="he" className="lang-op-he" disabled={i18n.language==="he"}>עברית</option>
-                <option value="ar" className="lang-op-ar" disabled={i18n.language==="ar"}>العربية</option>
-            </select> */}
+            <div className={"lang-list" + (open? " show":"")}>
+                { (i18n.language!=="en") && (<div className="lang-list-item" onClick={() => changeLang("en")}>English</div>) }
+                { (i18n.language!=="he") && (<div className="lang-list-item"  onClick={() => changeLang("he")}>עברית</div>) }
+                { (i18n.language!=="ar") && (<div className="lang-list-item ar"  onClick={() => changeLang("ar")}>العربية</div>) }
+            </div>
         </div>
     );
 }

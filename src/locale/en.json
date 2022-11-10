@@ -1,4 +1,7 @@
 {
+    "app": {
+        "title": "Portfolio"
+    },
     "header": {
         "theme": {
             "title": "Light <-> Dark"

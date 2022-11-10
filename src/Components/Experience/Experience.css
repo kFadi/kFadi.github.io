@@ -1,7 +1,7 @@
 .experience {
     
     /* "imported".. */
-    --shd-clr: var(--ex-shd-clr);
+    --shd-clr: var(--ex-shd_clr);
     /*  */
 
     --ex-size: 3rem;
@@ -434,16 +434,16 @@
     }
 
     .experience > div:hover {
-        transform: scale(1.05);
+        transform: scale(1.02);
         box-shadow: 0.1rem 0.1rem 0.5rem 0.5rem var(--shd-clr);
     }
     .experience:has(>div:hover) >div:not(:hover) {
-        opacity: 0.7;
-        transform: scale(0.9);
+        opacity: 0.75;
+        transform: scale(0.95);
     }
 
     .ex-line img:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         box-shadow: 0.15rem 0.15rem 0.25rem 0.1rem var(--shd-clr);
     }
 }

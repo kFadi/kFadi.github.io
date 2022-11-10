@@ -1,0 +1,67 @@
+.theme-wrp {
+    
+    --theme-h: var(--header-item-height);
+    --theme-ofst: var(--header-item-offset);
+    --theme-brdr_rds: var(--header-item-border_radius);
+    --theme-bgclr: var(--header-theme-bgclr);
+    
+    /* - - - */
+
+    --theme-w: 3.5rem;
+    --theme-icn_sz: calc(var(--theme-h) - 2 * var(--theme-ofst) );
+    
+    /* - - - */
+    
+    position: relative;
+    width: var(--theme-w);
+    height: var(--theme-h);
+}
+
+.theme-inp {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-sld {
+    
+    position: absolute;
+    inset: 0 0 0 0;
+    
+    width: var(--theme-w);
+    height: var(--theme-h);
+
+    background-color: var(--theme-bgclr);
+
+    border-radius: var(--theme-brdr_rds);
+
+    cursor: pointer;
+
+    transition: .5s ease-in-out;
+}
+
+.theme-sld:before {
+
+    position: absolute;
+    left: var(--theme-ofst);
+    top: var(--theme-ofst);
+    /* top: 50%;
+    transform: translateY(-50%); */
+    
+    content: "";
+    padding: 0.05em;
+    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+    
+    height: var(--theme-icn-sz,1.4em);
+    width: var(--theme-icn-sz,1.4em);
+    border-radius: 50%;
+    
+    transition: 0.7s var(--timing);
+}
+
+.theme-inp:checked + .theme-sld:before {
+    padding: 0em;
+    left: calc(100% - (var(--theme-icn-sz,1.4em) + 1.4*var(--theme-sld-ofst,0.3em))); 
+    background: var(--theme-bgclr);
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
