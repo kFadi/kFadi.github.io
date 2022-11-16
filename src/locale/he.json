@@ -3,8 +3,17 @@
         "title": "פורטפוליו"
     },
     "header": {
+        "trigger": {
+            "title": {
+                "not_opened": "אפשרויות..",
+                "opened": "סגור"
+            }
+        },
         "theme": {
-            "title": "כהה <-> בהיר"
+            "title": {
+                "end": "בהיר",
+                "start": "כהה"
+            }
         },
         "lang": {
             "title": "שפה"
@@ -16,7 +25,7 @@
             "title": "גרסה להדפסה"
         },
         "share": {
-            "title": "שתף את זה!",
+            "title": "שיתוף!",
             "whatsapp": {
                 "title": "שתף דרך וואטסאפ..",
                 "shared_title": "בדוק את קורות-החיים/תיק-העבודות הזה:"

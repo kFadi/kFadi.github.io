@@ -3,8 +3,17 @@
         "title": "پورتفوليو"
     },
     "header": {
+        "trigger": {
+            "title": {
+                "not_opened": "خيارات..",
+                "opened": "إغلاق"
+            }
+        },
         "theme": {
-            "title": "داكن <-> فاتح"
+            "title": {
+                "end": "فاتح",
+                "start": "داكن"
+            }
         },
         "lang": {
             "title": "اللغة"

@@ -5,7 +5,6 @@ import { FaGlobe } from "react-icons/fa";
 import useClickOutside from "../../custom/useClickOutside";
 import "./Lang.css";
 
-
 function Lang(): JSX.Element {
 
     const [open,setOpen] = useState<boolean>(false);
@@ -22,17 +21,17 @@ function Lang(): JSX.Element {
     return (
         <div className="lang" ref={langRef}>
             
-            <div className={"lang-trigger"} title={t("header.lang.title")} onClick={() => setOpen(!open)}>
-                <FaGlobe className="lang-icn1"/>
-                <div className={"lang-icn2  " + i18n.language}>
+            <div className={"lang-trigger " + i18n.language} title={t("header.lang.title")} onClick={() => setOpen(!open)}>
+                <FaGlobe className="lang-trigger__icn1"/>
+                <div className={"lang-trigger__icn2 " + i18n.language}>
                     <BiChevronDown/>
                 </div>
             </div>
             
-            <div className={"lang-list" + (open? " show":"")}>
-                { (i18n.language!=="en") && (<div className="lang-list-item" onClick={() => changeLang("en")}>English</div>) }
-                { (i18n.language!=="he") && (<div className="lang-list-item"  onClick={() => changeLang("he")}>עברית</div>) }
-                { (i18n.language!=="ar") && (<div className="lang-list-item ar"  onClick={() => changeLang("ar")}>العربية</div>) }
+            <div className={"lang-content" + (open? " show":"")}>
+                { (i18n.language!=="en") && (<div className="lang-content__itm" onClick={() => changeLang("en")}>English</div>) }
+                { (i18n.language!=="he") && (<div className="lang-content__itm"  onClick={() => changeLang("he")}>עברית</div>) }
+                { (i18n.language!=="ar") && (<div className="lang-content__itm ar"  onClick={() => changeLang("ar")}>العربية</div>) }
             </div>
         </div>
     );

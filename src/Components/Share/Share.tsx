@@ -11,38 +11,46 @@ import {
 } from "react-share";
 
 
-
 function Share(): JSX.Element {
     
     const [t, i18n ] = useTranslation();
     const sharedUrl = "https://kfadi.github.io/";
-    const shareIconSize = 33;
-
+    
     return (
-        <div className={"share flex flx-row flx-center" + (i18n.language==="he"? " rtl":"")}>
+        <div className={"share " + i18n.language}>
             
-            <div className="share-icon flex flx-row flx-center">
-                <FaShareAlt />
+            <div className="share-cvr">
+                <FaShareAlt/>
                 <div>{t("header.share.title")}</div>
             </div>
 
-            <WhatsappShareButton
+            <div className="share-itm share-whatsapp" title={t("header.share.whatsapp.title")}>
+                <WhatsappShareButton
+                    className="share-btn"
+                    title={t("header.share.whatsapp.shared_title")}
+                    url={sharedUrl}
+                >
+                    <WhatsappIcon round={true} className="share-icn"/>        
+                </WhatsappShareButton>
+            </div>  
+
+            {/* <WhatsappShareButton
                 className="share-social share-whatsapp"
                 title={t("header.share.whatsapp.shared_title")}
                 url={sharedUrl}
             >
-                    <div className="share-social-icon" title={t("header.share.whatsapp.title")}>
-                        <WhatsappIcon size={shareIconSize} round={true} />
+                    <div className="share-social-icon-wrp" title={t("header.share.whatsapp.title")}>
+                        <WhatsappIcon round={true} className="share-social-icon"/>
                     </div>  
-            </WhatsappShareButton>
+            </WhatsappShareButton> */}
 
             <LinkedinShareButton
                 className="share-social share-linkedin"
                 source={t("header.share.linkedin.shared_source")}
                 url={sharedUrl}
             >
-                    <div className="share-social-icon" title={t("header.share.linkedin.title")}>
-                        <LinkedinIcon size={shareIconSize} round={true} />
+                    <div className="share-social-icon-wrp" title={t("header.share.linkedin.title")}>
+                        <LinkedinIcon round={true} className="share-social-icon"/>
                     </div>
             </LinkedinShareButton>
 
@@ -52,8 +60,8 @@ function Share(): JSX.Element {
                 body={t("header.share.email.shared_body")}
                 url={sharedUrl}
             >
-                    <div className="share-social-icon" title={t("header.share.email.title")}>
-                        <EmailIcon size={shareIconSize} round={true} />
+                    <div className="share-social-icon-wrp" title={t("header.share.email.title")}>
+                        <EmailIcon round={true} className="share-social-icon"/>
                     </div>
             </EmailShareButton>
 

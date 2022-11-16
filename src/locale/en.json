@@ -3,8 +3,17 @@
         "title": "Portfolio"
     },
     "header": {
+        "trigger": {
+            "title": {
+                "not_opened": "Options..",
+                "opened": "Close"
+            }
+        },
         "theme": {
-            "title": "Light <-> Dark"
+            "title": {
+                "start": "Light",
+                "end": "Dark"
+            }
         },
         "lang": {
             "title": "Language"
@@ -16,7 +25,7 @@
             "title": "Printable Version.."
         },
         "share": {
-            "title": "Share This!",
+            "title": "Share!",
             "whatsapp": {
                 "title": "Share via Whatsapp..",
                 "shared_title": "Check That Awesome CV/Portfolio Out:"
