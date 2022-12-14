@@ -1,0 +1,286 @@
+.education {
+
+    /* --bg:var(--clr-brt1-tr); */
+    --bgclr: var(--edu-bgclr);
+    /* --bg: rgba(237, 237, 237, 0.66); */
+    --bg: linear-gradient(var(--bgclr), rgba(237, 237, 237, 0.33));
+    --ofst: 0.15rem;
+    --brdr-rds: 0.45rem;
+    --dstnc: 2rem;
+
+    --shd: var(--shd-lengths-touch) var(--shd-clr4);
+    --shd-hvr: var(--shd-lengths-cntr1) var(--shd-clr2);
+    /* --shd-img: inset 0 0 1rem 0rem var(--profile-img-shd_clr), 0 0 1rem 0.33rem var(--profile-img-shd_clr); */
+    --clr1: var(--main-clr);
+    --clr2: var(--main-clr-tr);
+    --clr-acc: var(--clr-acc1);
+    --clr-acc-tr: var(--clr-acc1-tr);
+    /* --bgclr-icn: var(--clr-brt1); */
+    --trnstn: var(--transition);
+    /* - - - */
+    --fnt-xl: var(--fntsz-xl); 
+    --fnt-lg: var(--fntsz-lg); 
+    --fnt-md: var(--fntsz-md); 
+    --fnt-sm: var(--fntsz-sm);
+    --fnt-xs: var(--fntsz-xs);
+    /* - - - */
+
+    width: var(--section-content-width);
+    padding: var(--section-content-padding);
+    
+    /* - - - */
+
+    --img-sz: 4rem;
+    
+    /* - - - */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    /* gap: 4rem; */
+    /* flex-wrap: wrap; */
+    
+	
+}
+
+.edu-tabs {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-content: center; */
+}
+.edu-content {
+    background: var(--bg);
+    width: 100%;
+    /* height: 50px; */
+    border: var(--ofst) solid var(--clr-acc);
+    border-radius: var(--brdr-rds);
+    display: grid;
+    place-items: center;
+
+}
+
+.edu-item {
+    /* background-color: aqua; */
+    /* position: relative; */
+    display: none;
+    /* flex-direction: column; */
+    gap: var(--dstnc);
+    /* margin-top:1.5rem; */
+
+    /* font-size: 1.2rem; */
+    font-weight: 500;
+    /* text-align: justify; */
+
+    padding: var(--dstnc);
+
+    /* transition: var(--trnstn); */
+    /* transition-delay: .1s; */
+
+    /* font-size: var(--fnt-sm); */
+
+    /*  */
+    /* padding: 20px 0 0; */
+    /* border-top: 1px solid #ddd; */
+}
+.edu-item__img {
+    width: var(--img-sz);
+    width: 100%;
+    /* height: var(--img-sz); */
+    /* margin-top: 1.5rem; */
+    box-shadow: var(--shd);
+    /* transition: var(--trnstn); */
+
+}
+
+/* * * * * * * * */
+/* * * * * * * * */
+/* * * * * * * * */
+.education input {
+    display: none;
+}
+
+.education label {
+    position: relative;
+    width: calc(var(--img-sz) + 2 * var(--ofst));
+    height: calc(var(--img-sz) + 2 * var(--ofst));
+    padding: 0.5rem;
+    border-radius: var(--brdr-rds);
+    transition: var(--trnstn);
+}
+
+.education input:not(:checked) + label:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+    box-shadow: 0rem -0.3rem 0.9rem var(--clr-acc-tr);
+}
+
+.education input:not(:checked) + label {
+    transform: scale(0.8) translateY(calc(-3 * var(--ofst)));
+}
+
+.education input:checked + label {
+    top: calc(1.5 * var(--ofst));
+    background-color: var(--bgclr);
+    border: var(--ofst) solid var(--clr-acc);
+    border-bottom: var(--ofst) solid var(--bgclr);
+}
+
+.education:has(#tab1:checked) .content1,
+.education:has(#tab2:checked) .content2,
+.education:has(#tab3:checked) .content3 {
+    display: flex;
+}
+
+/* * * * * * * * */
+/* * * * * * * * */
+
+.edu-item__grp1,
+.edu-item__grp2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(0.5 * var(--dstnc));
+    text-align: center;
+}
+.edu-item__grp1 {
+    padding-right: var(--dstnc);
+    border-right: var(--ofst) double var(--clr-acc);
+}
+.edu-item__grp2 {    
+    /* flex-direction: column; */
+    /* gap: calc(0.5 * var(--dstnc)); */
+}
+
+.edu-item__year {
+    /* position: absolute; */
+    color: var(--clr2);
+    font-size: var(--fnt-sm);
+}
+.edu-item__name {
+    color: var(--clr-acc);
+    font-weight: 600;
+    font-size: var(--fnt-md);
+
+}
+.edu-item__info1 {
+    font-size: var(--fnt-sm);
+}
+.edu-item__info2 {
+    color: var(--clr2);
+    font-size: var(--fnt-xs);
+}
+
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@ phone */
+@media (max-width: 599px) {
+    .edu-item {
+        flex-direction: column;
+    }
+    .edu-item__grp1 {
+        gap: calc(0.5 * var(--dstnc));
+        padding:0;
+        /* padding-bottom: var(--dstnc); */
+        border: none;
+        /* border-bottom: var(--ofst) double var(--clr-acc); */
+    }
+    .edu-item__grp2 {    
+        flex-direction: column;
+        gap: calc(0.5 * var(--dstnc));
+    }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@ tablet */
+@media (min-width: 600px) and (max-width: 899px) {
+
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@ tablet[+] */
+@media (min-width: 900px) and (max-width: 1199px) {
+
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@ desktop */
+@media (min-width: 1200px) and (max-width: 1799px) {
+
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@ desktop[+] */
+@media (min-width: 1800px) {    /*default w/o media queries*/
+
+}
+
+
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
+/* @@  P R I N T  */
+@media print {
+
+    .prt {
+        visibility: visible;
+      /* position: relative; */
+    }
+    
+    .dsp,
+    .dsp *,
+    .dsp *::before,
+    .dsp *::after {
+        visibility: hidden;
+        position: absolute;
+    }
+    
+    html {
+        /* font-size: 12px; */
+    }
+
+    header {
+        position: sticky;
+    }
+    .printable{
+        visibility: visible;
+    }
+}
+
+
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
+/* ##  devices that a mouse is their primary pointing device ( >> can hover ) */
+@media (pointer: fine) {
+
+}
+
+
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        transition-delay: 0ms !important;
+    }
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */

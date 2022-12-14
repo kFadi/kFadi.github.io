@@ -3,6 +3,9 @@
         "title": "Portfolio"
     },
     "header": {
+        "printable": {
+            "text": "For an updated Version & full User-Experience, please visit:"
+        },
         "trigger": {
             "title": {
                 "not_opened": "Options..",
@@ -49,14 +52,29 @@
     },
     "profile": {
         "name": "Kashan Fadi",
-        "motto": "Software Engineer with a modern Tech Stack and great passion for problem-solving.",
-        "phone": "+972 05480-05480",
-        "phone_title": "call",
-        "email": "kashan.fadi@gmail.com",
-        "email_title": "send an email",
-        "linkedin": "linkedin.com/in/k-fadi",
-        "github": "github.com/kFadi",
-        "browse_title": "browse",
+        "motto": "Software Engineer with modern Tech Stack and great passion for problem-solving.",
+        "contact": {
+            "phone": {
+                "txt": "+972 05480-05480",
+                "title": "call",
+                "href": "tel:+972548005480"
+            },
+            "email": {
+                "txt": "kashan.fadi@gmail.com",
+                "title": "send an email",
+                "href": "mailto:kashan.fadi@gmail.com"
+            },
+            "linkedin": {
+                "txt": "linkedin.com/in/k-fadi",
+                "title": "browse",
+                "href": "https://www.linkedin.com/in/k-fadi/"
+            },
+            "github": {
+                "txt": "github.com/kFadi",
+                "title": "browse",
+                "href": "https://github.com/kFadi"
+            }
+        },
         "soft_skills": "Interpersonal skills, adaptability, flexibility, active learning and attention to detail.",
         "languages": "English, Hebrew and Arabic @ high level."
     },
@@ -71,13 +89,12 @@
             "year": "2010-2011",
             "name": "Netanya Academic",
             "info1": "Computer Science (B.Sc)",
-            "info2": "graduation"
+            "info2": "completion"
         },
         "technion": {
             "year": "2000-2002",
             "name": "Technion",
-            "info1": "Computer Science (B.Sc)",
-            "info2": "start"
+            "info1": "Computer Science (B.Sc)"
         }
     },
     "projects": {

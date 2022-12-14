@@ -24,13 +24,15 @@ import Dropdown from './Components/Dropdown/Dropdown';
 import { FaGlobe } from 'react-icons/fa';
 import { BiLogOut } from 'react-icons/bi';
 import useClickOutside from './custom/useClickOutside';
-
-
+import Profile from './Components/Profile/Profile';
+import Education from './Components/Education/Education';
 
 
 function App() {
 
   const date = "01.11.2022";
+  const url = "kfadi.github.io"
+
   const [isDark,setIsDark] = useState<boolean>(false);
   // const [isShowTrigger,setIsShowTrigger] = useState<boolean>(false);
   const [openList,setOpenList] = useState<boolean>(false);
@@ -65,34 +67,44 @@ function App() {
     <div className={"App theme-" + ((isDark)?"dark":"light")}>
 
       <header>
+
+        <div className={"header-print prt " + i18n.language}><span>{t("header.printable.text")}</span><span>{url}</span></div>
         
-        <div className={"hdr-trigger " + i18n.language}
-              title={openList? t("header.trigger.title.opened"):t("header.trigger.title.not_opened")}
-              onClick={()=>setOpenList(!openList)} ref={triggerRef}
-              >
-          <div className={"hdr-trigger__icn" + (openList? " opened":"")}></div>
-        </div>
+        <div className="header-display dsp">
 
-        <div className={"hdr-content" + (openList? " show":"")}>
+          <div className={"hdr-trigger " + i18n.language}
+                title={openList? t("header.trigger.title.opened"):t("header.trigger.title.not_opened")}
+                onClick={()=>setOpenList(!openList)}
+                ref={triggerRef}
+                >
+            <div className={"hdr-trigger__icn" + (openList? " opened":"")}></div>
+          </div>
 
-          <menu>
-            <div className="menu__grp">
-              <Theme handleChange={handleChangeTheme}/>
-              <Lang />
-            </div>
-            <div className={"menu__grp " + i18n.language}>
-              <RiFileInfoFill className="menu__icn" title={t("header.info.title",{date})}/>
-              <BsPrinterFill className="menu__icn" title={t("header.print.title")}/>
-            </div>
-            <Share/>
-          </menu>
-          
-          <nav className={i18n.language}>
-            <a href="#profile">{t("header.nav.profile")}</a>
-            <a href="#education">{t("header.nav.education")}</a>
-            <a href="#experience">{t("header.nav.experience")}</a>
-            <a href="projects">{t("header.nav.projects")}</a>
-          </nav>
+          <div className={"hdr-content" + (openList? " show":"")}>
+
+            <menu>
+              <div className="menu__grp">
+                <Theme handleChange={handleChangeTheme}/>
+                <Lang />
+              </div>
+              <div className={"menu__grp " + i18n.language}>
+                <RiFileInfoFill className="menu__icn" title={t("header.info.title",{date})}/>
+                {/* <a href={require("./assets/docs/KFadi_CV_" + i18n.language + ".pdf")} download> */}
+                <a href={require("./assets/docs/KFadi_CV_" + i18n.language + ".pdf")} target="_blank">
+                  <BsPrinterFill className="menu__icn" title={t("header.print.title")}/>
+                </a>
+              </div>
+              <Share/>
+            </menu>
+            
+            <nav className={i18n.language}>
+              <div onClick={()=>{if (openList) setOpenList(false)}}><a href="#profile">{t("header.nav.profile")}</a></div>
+              <div onClick={()=>{if (openList) setOpenList(false)}}><a href="#education">{t("header.nav.education")}</a></div>
+              <div onClick={()=>{if (openList) setOpenList(false)}}><a href="#experience">{t("header.nav.experience")}</a></div>
+              <div onClick={()=>{if (openList) setOpenList(false)}}><a href="#projects">{t("header.nav.projects")}</a></div>
+            </nav>
+
+          </div>
 
         </div>
 
@@ -101,19 +113,22 @@ function App() {
       <main>
 
         <section id='profile'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita ea dolorem placeat quam, obcaecati nemo nesciunt. Possimus odit cupiditate tenetur, dicta alias consequatur autem blanditiis perferendis amet impedit sit!
+          {/* <h1>Profile</h1> */}
+          <Profile/>
         </section>
 
         <section id='education'>
-
+          {/* <h1>Education</h1> */}
+          <Education/>
         </section>
         
         <section id='experience'>
+          {/* <h1>Experience</h1> */}
           <Experience/>
         </section>
 
         <section id='projects'>
-
+          {/* <h1>Projects</h1> */}
         </section>
       </main>
 

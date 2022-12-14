@@ -4,8 +4,8 @@
     --theme-w: var(--header-item-width);
     --ofst: var(--header-item-offset);
     --brdr-rds: var(--header-item-border_radius);
-    --shd: var(--shd-lengths-touch) var(--shd-clr2);
-    --shd-hvr: var(--shd-lengths-cntr2) var(--shd-clr2);
+    --shd: var(--shd-lengths-touch) var(--shd-clr4);
+    --shd-hvr: var(--shd-lengths-cntr3) var(--shd-clr4);
     --bgclr: var(--header-item-bgclr);
     --trnstn: var(--transition);
     /* - - - */

@@ -1,19 +1,24 @@
 .experience {
     
-    /* "imported".. */
-    --shd-clr: var(--ex-shd_clr);
-    /*  */
+     /* - - - */
+    --fnt-xl: var(--fntsz-xl); 
+    --fnt-lg: var(--fntsz-lg); 
+    --fnt-md: var(--fntsz-md); 
+    --fnt-sm: var(--fntsz-sm); 
+    --fnt-xs: var(--fntsz-xs); 
+    /* - - - */
+    --clr-acc: var(--clr-acc1);
+    --shd-clr: var(--shd-clr2);
+    /* - - - */
+    width: var(--section-content-width);
+    padding: var(--section-content-padding);
+    /* - - - */
 
-    --ex-size: 3rem;
-    /* * */
-    /* margin-inline: 8vw; */
-    width: min(92vw, 70rem);
+    /* --ex-size: 2.5rem; */
+    --ex-size: clamp(1.8rem, 0.8rem + 2vw, 2.5rem);
 
-    padding: 2rem;
-    /* border-radius: 0.8rem;; */
     display: grid;
-    left: 50%;
-    gap: 1.3rem;
+    gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -22,13 +27,13 @@
 
 /* __ group __ */
 .experience > div {
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     gap: 0.7rem;
-    padding: 1rem;
+    padding: 0.5rem;
     box-shadow: 0.1rem 0.1rem 0.5rem var(--shd-clr);
 }
 
@@ -60,39 +65,43 @@
 
 /* __ title __ */
 .ex-line:first-child {
-    font-size: 1.6rem;
+    /* font-size: 1.5rem; */
+    font-size: var(--fnt-lg);
     font-weight: 500;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
 }
 
 /* __ txt __ */
 .ex-line > span {
+    font-size: var(--fnt-sm);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 0.5rem;
+    margin-right: 0.3rem;
 }
 .ex-line > span > small {
-    font-size: 1.3rem;
+    /* font-size: 1.3rem; */
+    font-size: var(--fnt-md);
     opacity: 0.7;
     font-weight: 300;
-    margin-inline: 0.1rem;
+    margin-inline: 0.05rem;
 }
 .ex-line > .ex-line > span > small:is(:first-child) {
-    margin-left: 0.5rem;
+    margin-left: 0.3rem;
 }
 .ex-line > span > strong {
-    font-size: 1.7rem;
+    /* font-size: 1.7rem; */
+    font-size: var(--fnt-lg);
     opacity: 0.7;
     font-weight: 300;
-    margin-left: 0.4rem;
-    margin-right: 0.2rem;
+    margin-left: 0.3rem;
+    margin-right: 0.15rem;
 }
 
 /* __ img __ */
 .ex-line img {
     
-    margin-right: 0.25rem;
+    margin-right: 0.2rem;
 
     /* width: var(--ex-size);
     height: var(--ex-size); */
@@ -100,23 +109,12 @@
     max-width: var(--ex-size);
     min-height: var(--ex-size);
     max-height: var(--ex-size);
-    
-    /* box-sizing: content-box; */
-    /* padding: 0.05rem; */
-        
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+
     display: grid;
     place-items: center;
-    /* place-content: center; */
-    
-    /* object-fit:cover; */
 
     border-radius: 0.25rem;
     box-shadow: 0.1rem 0.1rem 0.2rem var(--shd-clr);
-    
-    /* overflow: hidden; */
 }
 .experience img:is(.cr) {
     border-radius: 50%;
@@ -184,7 +182,7 @@
         /* margin-inline: 0vw; */
         /* width: min(92vw, 75rem); */
         grid-template-columns: 1fr;
-        gap: 1rem;
+        /* gap: 1rem; */
     }
 
     /* ------------------- */
@@ -192,7 +190,7 @@
     /* __ group __ */
     .experience > div {
         /* gap: 0.3rem; */
-        padding: 0.7rem;
+        /* padding: 0.7rem; */
     }
 
     /* __ line __ */
@@ -266,7 +264,7 @@
         margin-inline: 2vw;
         width: min(98vw, 50rem);
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.2rem;
+        /* gap: 1.2rem; */
     }
 
     /* ------------------- */
@@ -274,7 +272,7 @@
     /* __ group __ */
     .experience > div {
         /* gap: 0.3rem; */
-        padding: 0.5rem;
+        /* padding: 0.5rem; */
     }
 
     /* __ line __ */   
@@ -350,7 +348,7 @@
         /* margin: minmax(16vw, 18rem); */
         width: 80rem;
         grid-template-columns: repeat(5, 1fr);
-        gap: 1.4rem;
+        /* gap: 1.4rem; */
     }
 
     /* ------------------- */
@@ -358,7 +356,7 @@
     /* __ group __ */
     .experience > div {
         /* gap: 0.3rem; */
-        padding: 0.5rem;
+        /* padding: 0.5rem; */
     }
 
     /* __ line __ */
@@ -423,11 +421,84 @@
     }
 }
 
-/* ########################## */
-/* ########################## */
+
+
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@ phone */
+@media (max-width: 599px) {}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@ tablet */
+@media (min-width: 600px) and (max-width: 899px) {
+
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@ tablet[+] */
+@media (min-width: 900px) and (max-width: 1199px) {
+
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@ desktop */
+@media (min-width: 1200px) and (max-width: 1799px) {
+
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@ desktop[+] */
+@media (min-width: 1800px) {    /*default w/o media queries*/
+
+}
+
+
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
+/* @@  P R I N T  */
+@media print {
+
+    .prt {
+        visibility: visible;
+      /* position: relative; */
+    }
+    
+    .dsp,
+    .dsp *,
+    .dsp *::before,
+    .dsp *::after {
+        visibility: hidden;
+        position: absolute;
+    }
+    
+    html {
+        font-size: 12px;
+    }
+
+    header {
+        position: sticky;
+    }
+    .printable{
+        visibility: visible;
+    }
+}
+
+
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
 /* ##  devices that a mouse is their primary pointing device ( >> can hover ) */
 @media (pointer: fine) {
-
     .experience > div,
     .ex-line img {
         transition: .3s ease;
@@ -441,9 +512,35 @@
         opacity: 0.75;
         transform: scale(0.95);
     }
+     /* __ title __ */
+    .experience > div:hover .ex-line:first-child {
+        color: var(--clr-acc);
+        font-size: var(--fnt-xs);
+        text-decoration: solid;
+    }
 
     .ex-line img:hover {
         transform: scale(1.05);
         box-shadow: 0.15rem 0.15rem 0.25rem 0.1rem var(--shd-clr);
     }
+
 }
+
+
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        transition-delay: 0ms !important;
+    }
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
