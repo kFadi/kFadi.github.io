@@ -144,9 +144,13 @@
     gap: calc(0.5 * var(--dstnc));
     text-align: center;
 }
-.edu-item__grp1 {
+.education:is(.en) .edu-item__grp1 {
     padding-right: var(--dstnc);
     border-right: var(--ofst) double var(--clr-acc);
+}
+.education:not(.en) .edu-item__grp1 {
+    padding-left: var(--dstnc);
+    border-left: var(--ofst) double var(--clr-acc);
 }
 .edu-item__grp2 {    
     /* flex-direction: column; */

@@ -26,16 +26,18 @@ import { BiLogOut } from 'react-icons/bi';
 import useClickOutside from './custom/useClickOutside';
 import Profile from './Components/Profile/Profile';
 import Education from './Components/Education/Education';
+import Modal from './Components/Modal/Modal';
 
 
 function App() {
 
-  const date = "01.11.2022";
+  const date = "01.12.2022";
   const url = "kfadi.github.io"
 
   const [isDark,setIsDark] = useState<boolean>(false);
   // const [isShowTrigger,setIsShowTrigger] = useState<boolean>(false);
   const [openList,setOpenList] = useState<boolean>(false);
+  const [openModal,setOpenModal] = useState<boolean>(false);
   const [t, i18n ] = useTranslation();
 
   const handleChangeTheme = (chkd: boolean) => { setIsDark(chkd) }
@@ -44,7 +46,7 @@ function App() {
   // useClickOutside(triggerRef,()=>{ if (openList) setOpenList(false) });
 
   useEffect (() => {
-    document.title =t("app.title");
+    document.title = t("app.title");
   },[i18n.language])
 
 
@@ -85,10 +87,20 @@ function App() {
             <menu>
               <div className="menu__grp">
                 <Theme handleChange={handleChangeTheme}/>
+                {/* <Theme handleChange={(chkd: boolean) => setIsDark(chkd)}/> */}
                 <Lang />
               </div>
               <div className={"menu__grp " + i18n.language}>
-                <RiFileInfoFill className="menu__icn" title={t("header.info.title",{date})}/>
+                <RiFileInfoFill className="menu__icn" title={t("header.info.title",{date})}
+                  onClick={() => {
+                      console.log("----------");
+                      console.log("openModal >> "+openModal);
+                      setOpenModal(true);
+                    }}
+                />
+                <Modal open={openModal} onClose={() => setOpenModal(false)}>
+                  {t("header.info.txt")}
+                </Modal>
                 {/* <a href={require("./assets/docs/KFadi_CV_" + i18n.language + ".pdf")} download> */}
                 <a href={require("./assets/docs/KFadi_CV_" + i18n.language + ".pdf")} target="_blank">
                   <BsPrinterFill className="menu__icn" title={t("header.print.title")}/>

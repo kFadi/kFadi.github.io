@@ -22,7 +22,8 @@
             "title": "Language"
         },
         "info": {
-            "title": "Updated {{date}}\nLorem Ipsum has been the industry's standard dummy text"
+            "title": "about the App..",
+            "txt": "Updated {{date}}\nLorem Ipsum has been the industry's standard dummy text"
         },
         "print": {
             "title": "Printable Version.."
