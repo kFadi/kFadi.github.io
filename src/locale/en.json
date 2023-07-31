@@ -101,24 +101,6 @@
     "projects": {
         "link": {
             "title": "move.."
-        },
-        "koburger": {
-            "info": "Lorem Ipsum has been the industry's standard dummy text"
-        },
-        "cats_n_toys": {
-            "info": "Lorem Ipsum has been the industry's standard dummy text"
-        },
-        "couponinja": {
-            "info": "Lorem Ipsum has been the industry's standard dummy text"
-        },
-        "taas": {
-            "info": "Lorem Ipsum has been the industry's standard dummy text"
-        },
-        "rick_n_morty": {
-            "info": "Lorem Ipsum has been the industry's standard dummy text"
-        },
-        "currency_exchange": {
-            "info": "Lorem Ipsum has been the industry's standard dummy text"
         }
     }
 }

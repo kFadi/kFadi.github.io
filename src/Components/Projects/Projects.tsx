@@ -17,7 +17,12 @@ function Projects(): JSX.Element {
             <div className="card-pr">
                 <div className="pr-details-container">
                     <div className="pr-title">coupoNinja</div>
-                    <div className="pr-info overflow-y-scroll">{t("projects.couponinja.info")}</div>
+                    <div className="pr-info overflow-y-scroll">
+                        <div className="pr-info-line">Advanced Coupon System (Desktop)</div>
+                        <div className="pr-info-line">Full Stack (Spring-REST-React)</div>
+                        <div className="pr-info-line">Deployed@ GCP</div>
+                        <div className="pr-info-line">* sign-in as Admin (admin@admin.com : admin) then view Companies'/Customers' credentials to sign-in as</div>
+                    </div>
                     <a className="pr-lnk" href="https://couponinja-723-fe.oa.r.appspot.com"
                         target={"_blank"} title={t("projects.link.title")}>
                         <MdDoubleArrow size={36} />
@@ -31,7 +36,12 @@ function Projects(): JSX.Element {
             <div className="card-pr">
                 <div className="pr-details-container">
                     <div className="pr-title">TaaS</div>
-                    <div className="pr-info overflow-y-scroll">{t("projects.taas.info")}</div>
+                    <div className="pr-info overflow-y-scroll">
+                        <div className="pr-info-line">Tasks as a Service (Desktop)</div>
+                        <div className="pr-info-line">Full Stack (Spring-REST-React)</div>
+                        <div className="pr-info-line">Deployed@ GCP</div>
+                        <div className="pr-info-line">* sign-in as Admin (admin@admin.com : admin) then view Users' credentials to sign-in as</div>
+                    </div>
                     {/* <a className="pr-lnk" href="#"
                         target={"_blank"} title={t("projects.link.title")}>
                         <MdDoubleArrow size={36} />
@@ -45,11 +55,15 @@ function Projects(): JSX.Element {
             <div className="card-pr">
                 <div className="pr-details-container">
                     <div className="pr-title">CATs & TOYs</div>
-                    <div className="pr-info overflow-y-scroll">{t("projects.cats_n_toys.info")}</div>
-                    {/* <a className="pr-lnk" href="#"
+                    <div className="pr-info overflow-y-scroll">
+                        <div className="pr-info-line">Dynamic Multi-View UI concept (Desktop)</div>
+                        <div className="pr-info-line">Full Stack (Spring-REST-React)</div>
+                        <div className="pr-info-line">Deployed@ GCP</div>
+                    </div>
+                    <a className="pr-lnk" href="https://cats-n-toys-fe.oa.r.appspot.com"
                         target={"_blank"} title={t("projects.link.title")}>
                         <MdDoubleArrow size={36} />
-                    </a> */}
+                    </a>
                 </div>
                 <div className="pr-img-container">
                     <img className="pr-img" src={img_cats_n_toys} alt=".." />
@@ -59,7 +73,11 @@ function Projects(): JSX.Element {
             <div className="card-pr">
                 <div className="pr-details-container">
                     <div className="pr-title">KOBURGER</div>
-                    <div className="pr-info overflow-y-scroll">{t("projects.koburger.info")}</div>
+                    <div className="pr-info overflow-y-scroll">
+                        <div className="pr-info-line">Classic Burger stacking fun (Desktop)</div>
+                        <div className="pr-info-line">Frontend (Vanilla JS/HTML/CSS)</div>
+                        <div className="pr-info-line">Deployed@ GitHab-Pages</div>
+                    </div>
                     <a className="pr-lnk" href="https://kfadi.github.io/koburger/"
                         target={"_blank"} title={t("projects.link.title")}>
                         <MdDoubleArrow size={36} />
