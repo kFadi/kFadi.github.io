@@ -27,11 +27,12 @@ import useClickOutside from './custom/useClickOutside';
 import Profile from './Components/Profile/Profile';
 import Education from './Components/Education/Education';
 import Modal from './Components/Modal/Modal';
+import Projects from './Components/Projects/Projects';
 
 
 function App() {
 
-  const date = "01.12.2022";
+  const date = "30.07.2023";
   const url = "kfadi.github.io"
 
   const [isDark,setIsDark] = useState<boolean>(false);
@@ -57,8 +58,6 @@ function App() {
   // }
 
   // // //
-
-
   // useEffect(()=>{
     // console.log("openMenu: " + {openMenu} + "   ///   openNav: " + {openNav});
     // {console.log("openMenu: " + openMenu + "   ///   openNav: " + openNav);}
@@ -70,7 +69,7 @@ function App() {
 
       <header>
 
-        <div className={"header-print prt " + i18n.language}><span>{t("header.printable.text")}</span><span>{url}</span></div>
+        {/* <div className={"header-print prt " + i18n.language}><span>{t("header.printable.text")}</span><span>{url}</span></div> */}
         
         <div className="header-display dsp">
 
@@ -141,6 +140,7 @@ function App() {
 
         <section id='projects'>
           {/* <h1>Projects</h1> */}
+          <Projects/>
         </section>
       </main>
 
