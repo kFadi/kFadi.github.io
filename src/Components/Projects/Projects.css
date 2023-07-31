@@ -38,7 +38,7 @@
     background: var(--clr-gry-drk);
     border-radius: 5px;
 
-    z-index: 10;
+    z-index: 9;
     /* * * */
     transition: 1.2s cubic-bezier(0.075, 0.82, 0.165, 1), color 1s;
 }
@@ -94,7 +94,7 @@
     max-height: 60%;
 
     color: var(--clr-wht-dim2);
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .pr-info-line {

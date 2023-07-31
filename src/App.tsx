@@ -92,14 +92,12 @@ function App() {
               <div className={"menu__grp " + i18n.language}>
                 <RiFileInfoFill className="menu__icn" title={t("header.info.title",{date})}
                   onClick={() => {
-                      console.log("----------");
-                      console.log("openModal >> "+openModal);
+                      // console.log("----------");
+                      // console.log("openModal >> "+openModal);
                       setOpenModal(true);
                     }}
                 />
-                <Modal open={openModal} onClose={() => setOpenModal(false)}>
-                  {t("header.info.txt")}
-                </Modal>
+                <Modal open={openModal} onClose={() => setOpenModal(false)} date={date} isDark={isDark}/>
                 {/* <a href={require("./assets/docs/KFadi_CV_" + i18n.language + ".pdf")} download> */}
                 <a href={require("./assets/docs/KFadi_CV_" + i18n.language + ".pdf")} target="_blank">
                   <BsPrinterFill className="menu__icn" title={t("header.print.title")}/>

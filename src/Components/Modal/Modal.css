@@ -1,3 +1,4 @@
+
 .overlay {
     position: fixed;
     top: 0;
@@ -13,7 +14,57 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #FFF;
-    padding: 50px;
+    background-color: #ededed;
+    color: #1b1b1b;
+    padding: 4rem;
     z-index: 1000;
+}
+
+.modal__line {
+    margin-bottom: 0.5rem;
+}
+
+.drk {
+    background-color: #1b1b1b;
+    color: #ededed;
+}
+
+.modal button {
+
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    overflow: hidden;
+
+    padding: 0.1rem;
+    padding-bottom: 0px;
+
+    /* color: var(--clr-gry-drk); */
+
+    border-color: transparent;
+    border-radius: 50%;
+
+    /* * * */
+    
+
+}
+
+#modal__icn {
+    color: #ff4848;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1), color 1.5s;
+}
+
+#modal__icn:hover {
+
+    /* background-color: #ff4848;
+    color: #ededed; */
+
+    transform: scale(1.1);
+
+    cursor: pointer;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+
+    /* animation: pulse-eff 1s infinite linear; */
 }

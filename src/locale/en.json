@@ -23,7 +23,7 @@
         },
         "info": {
             "title": "about the App..",
-            "txt": "Updated {{date}}\nLorem Ipsum has been the industry's standard dummy text"
+            "close": "Close"
         },
         "print": {
             "title": "Printable Version.."

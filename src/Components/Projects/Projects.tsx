@@ -76,7 +76,7 @@ function Projects(): JSX.Element {
                     <div className="pr-info overflow-y-scroll">
                         <div className="pr-info-line">Classic Burger stacking fun (Desktop)</div>
                         <div className="pr-info-line">Frontend (Vanilla JS/HTML/CSS)</div>
-                        <div className="pr-info-line">Deployed@ GitHab-Pages</div>
+                        <div className="pr-info-line">Deployed@ GitHub-Pages</div>
                     </div>
                     <a className="pr-lnk" href="https://kfadi.github.io/koburger/"
                         target={"_blank"} title={t("projects.link.title")}>
