@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9251e57e.css",
-    "main.js": "/static/js/main.26a2cddf.js",
+    "main.css": "/static/css/main.d512a633.css",
+    "main.js": "/static/js/main.48729821.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/pr_taas.png": "/static/media/pr_taas.e4fe40b66ad60ef5ef4f.png",
     "static/media/pr_couponinja.png": "/static/media/pr_couponinja.db11f983ab745aa88301.png",
@@ -12,12 +12,12 @@
     "static/media/KFadi_CV_he.pdf": "/static/media/KFadi_CV_he.fef8d85174ba00c09236.pdf",
     "static/media/profile.png": "/static/media/profile.58bbdd7b073f3a3435f8.png",
     "index.html": "/index.html",
-    "main.9251e57e.css.map": "/static/css/main.9251e57e.css.map",
-    "main.26a2cddf.js.map": "/static/js/main.26a2cddf.js.map",
+    "main.d512a633.css.map": "/static/css/main.d512a633.css.map",
+    "main.48729821.js.map": "/static/js/main.48729821.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9251e57e.css",
-    "static/js/main.26a2cddf.js"
+    "static/css/main.d512a633.css",
+    "static/js/main.48729821.js"
   ]
 }
