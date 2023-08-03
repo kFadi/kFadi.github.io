@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bc74f296.css",
-    "main.js": "/static/js/main.ddd983e8.js",
+    "main.css": "/static/css/main.33f015de.css",
+    "main.js": "/static/js/main.788b3357.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/pr_ghp.png": "/static/media/pr_ghp.e4fe40b66ad60ef5ef4f.png",
     "static/media/pr_moodle.png": "/static/media/pr_moodle.e4fe40b66ad60ef5ef4f.png",
@@ -14,12 +14,12 @@
     "static/media/KFadi_CV_en.pdf": "/static/media/KFadi_CV_en.fef8d85174ba00c09236.pdf",
     "static/media/profile.png": "/static/media/profile.58bbdd7b073f3a3435f8.png",
     "index.html": "/index.html",
-    "main.bc74f296.css.map": "/static/css/main.bc74f296.css.map",
-    "main.ddd983e8.js.map": "/static/js/main.ddd983e8.js.map",
+    "main.33f015de.css.map": "/static/css/main.33f015de.css.map",
+    "main.788b3357.js.map": "/static/js/main.788b3357.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc74f296.css",
-    "static/js/main.ddd983e8.js"
+    "static/css/main.33f015de.css",
+    "static/js/main.788b3357.js"
   ]
 }
