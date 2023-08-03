@@ -4,6 +4,7 @@ import img_cats_n_toys from "../../assets/images/projects/pr_cats_n_toys.png";
 import img_koburger from "../../assets/images/projects/pr_koburger.png";
 import img_gcp from "../../assets/images/projects/pr_gcp.png";
 import img_ghp from "../../assets/images/projects/pr_ghp.png";
+import img_moodle from "../../assets/images/projects/pr_moodle.png";
 
 import { useTranslation } from "react-i18next";
 import "./Projects.css";
@@ -126,6 +127,28 @@ function Projects(): JSX.Element {
                     <img className="pr-img" src={img_ghp} alt=".." />
                 </div>
             </div>
+
+            <div className="card-pr">
+                <div className="pr-details-container">
+                    <div className="pr-title">project moodle</div>
+                    <div className="pr-info overflow-y-scroll">
+                        <div className="pr-info-line">DEV guides/notes</div>
+                        <div className="pr-info-line"> <b>moodle</b> LMS platform</div>
+                        <div className="pr-info-line">Deployed@ GCP</div>
+                    </div>
+                    {/* <a className="pr-lnk" href="#"
+                        target={"_blank"} title={t("projects.link.title")}>
+                        <MdDoubleArrow size={36} />
+                    </a> */}
+                </div>
+                <div className="pr-img-container">
+                    <img className="pr-img" src={img_moodle} alt=".." />
+                </div>
+            </div>
+
+            || Moodle is an open-source learning platform for personalised learning environments
+
+|| BITNAMI LMS POWERED BY MOODLE (LMS- Learning Management System)
 
         </div>
     );
