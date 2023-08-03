@@ -26,7 +26,7 @@ function Modal(props: ModalProps): JSX.Element {
                 <div>
                     <div className="modal__line"><b> {props.date}</b> </div>
                     <div className="modal__line"> {<br/>}<u>Demonstrating:</u></div>
-                    <div className="modal__line"> Accessibility (Themes), Localization (Multilingual), Responsive Web Design & more.. </div>
+                    <div className="modal__line"> <b>Accessibility</b> (Themes), <b>Localization</b> (Multilingual), <b>Responsive</b> Web Design & more.. </div>
                     <div className="modal__line"> {<br/>} Deployed @ <b>GitHub-Pages</b>  </div>
 
                 </div>
