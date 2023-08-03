@@ -1,7 +1,3 @@
-.Projects {
-	
-}
-
 /* ------------------------ */
 
 .card-pr, 
@@ -164,6 +160,8 @@
         font-weight: 900;
     
         transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        color: var(--main-color);
     }
     
     .pr-info {
@@ -181,6 +179,8 @@
         box-shadow: none;
         
         animation: none;
+
+        color: var(--main-color);
     }
 
     .pr-img-container {

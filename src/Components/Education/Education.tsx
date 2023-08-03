@@ -13,61 +13,57 @@ function Education(): JSX.Element {
     return (
         <div className={"education " + i18n.language}>
 
+            <input id="rd1" type="radio" name="radio_group" checked/>
+            <input id="rd2" type="radio" name="radio_group"/>
+            <input id="rd3" type="radio" name="radio_group"/>
+
             <div className="edu-tabs">
-                <input id="tab1" type="radio" name="tabs" checked/>
-                <label htmlFor="tab1">
-                    <img className="edu-item__img" src={img_jo} alt="Johb Bryce logo" />
+                <label htmlFor="rd1" className="tab" id="tab1">
+                    <img className="tab-img" src={img_jo} alt="Johb Bryce logo" />
                 </label>
-
-                <input id="tab2" type="radio" name="tabs"/>
-                <label htmlFor="tab2">
-                    <img className="edu-item__img" src={img_ne} alt="Netanya Academic logo" />
+                <label htmlFor="rd2" className="tab" id="tab2">
+                    <img className="tab-img" src={img_ne} alt="Netanya Academic logo" />
                 </label>
-
-                <input id="tab3" type="radio" name="tabs"/>
-                <label htmlFor="tab3">
-                    <img className="edu-item__img" src={img_te} alt="Technion logo" />
-                </label>                
+                <label htmlFor="rd3" className="tab" id="tab3">
+                    <img className="tab-img" src={img_te} alt="Technion logo" />
+                </label>     
             </div>
-            {/* * * * */}
             
-            <div className="edu-content">
-                <div className="edu-item content1">
-                    <div className="edu-item__grp1">
-                        <div className="edu-item__year">{t("education.john_bryce.year")}</div>
-                        <div className="edu-item__name">{t("education.john_bryce.name")}</div>
-                    </div>
-                    {/* <img className="edu-item__img" src={img_jo} alt="Johb Bryce logo" /> */}
-                    <div className="edu-item__grp2">
-                        <div className="edu-item__info1">{t("education.john_bryce.info1")}</div>
-                        <div className="edu-item__info2">{t("education.john_bryce.info2")}</div>
-                    </div>
+            {/* * * * */}
+
+            <div className="edu-panels">   
+                <div className="panel" id="panel1">
+                        <div className="panel-grp1">
+                            <div className="grp1-year">{t("education.john_bryce.year")}</div>
+                            <div className="grp1-name">{t("education.john_bryce.name")}</div>
+                        </div>
+                        <div className="panel-grp2">
+                            <div className="grp2-info1">{t("education.john_bryce.info1")}</div>
+                            <div className="grp2-info2">{t("education.john_bryce.info2")}</div>
+                        </div>
+                </div>
+                <div className="panel" id="panel2">
+                        <div className="panel-grp1">
+                            <div className="grp1-year">{t("education.netanya.year")}</div>
+                            <div className="grp1-name">{t("education.netanya.name")}</div>
+                        </div>
+                        <div className="panel-grp2">
+                            <div className="grp2-info1">{t("education.netanya.info1")}</div>
+                            <div className="grp2-info2">{t("education.netanya.info2")}</div>
+                        </div>
+                </div>
+                <div className="panel" id="panel3">
+                        <div className="panel-grp1">
+                            <div className="grp1-year">{t("education.technion.year")}</div>
+                            <div className="grp1-name">{t("education.technion.name")}</div>
+                        </div>
+                        <div className="panel-grp2">
+                            <div className="grp2-info1">{t("education.technion.info1")}</div>
+                        </div>
                 </div>
                 
-                <div className="edu-item content2">
-                    <div className="edu-item__grp1">
-                        <div className="edu-item__year">{t("education.netanya.year")}</div>
-                        <div className="edu-item__name">{t("education.netanya.name")}</div>
-                    </div>
-                    {/* <img className="edu-item__img" src={img_ne} alt="Netanya Academic logo" /> */}
-                    <div className="edu-item__grp2">
-                        <div className="edu-item__info1">{t("education.netanya.info1")}</div>
-                        <div className="edu-item__info2">{t("education.netanya.info2")}</div>
-                    </div>
-                </div>
-                <div className="edu-item content3">
-                    <div className="edu-item__grp1">        
-                        <div className="edu-item__year">{t("education.technion.year")}</div>
-                        <div className="edu-item__name">{t("education.technion.name")}</div>
-                    </div>
-                    {/* <img className="edu-item__img" src={img_te} alt="Technion logo" /> */}
-                    <div className="edu-item__grp2">
-                        <div className="edu-item__info1">{t("education.technion.info1")}</div>
-                        {/* <div className="edu-item__info2">{t("education.technion.info2")}</div> */}
-                    </div>
-                </div>
-            </div>
-			
+            </div>   
+        
         </div>
     );
 }

@@ -132,7 +132,7 @@ function Projects(): JSX.Element {
                 <div className="pr-details-container">
                     <div className="pr-title">project moodle</div>
                     <div className="pr-info overflow-y-scroll">
-                        <div className="pr-info-line">DEV guides/notes</div>
+                        <div className="pr-info-line">my <b>DEV</b> guides/notes</div>
                         <div className="pr-info-line"> <b>moodle</b> LMS platform</div>
                         <div className="pr-info-line">Deployed@ GCP</div>
                     </div>
@@ -145,10 +145,6 @@ function Projects(): JSX.Element {
                     <img className="pr-img" src={img_moodle} alt=".." />
                 </div>
             </div>
-
-            || Moodle is an open-source learning platform for personalised learning environments
-
-|| BITNAMI LMS POWERED BY MOODLE (LMS- Learning Management System)
 
         </div>
     );
