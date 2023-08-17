@@ -1,5 +1,6 @@
 import img_couponinja from "../../assets/images/projects/pr_couponinja.png";
 import img_taas from "../../assets/images/projects/pr_taas.png";
+import img_vaas from "../../assets/images/projects/pr_vaas.png";
 import img_cats_n_toys from "../../assets/images/projects/pr_cats_n_toys.png";
 import img_koburger from "../../assets/images/projects/pr_koburger.png";
 import img_gcp from "../../assets/images/projects/pr_gcp.png";
@@ -27,7 +28,7 @@ function Projects(): JSX.Element {
                         <div className="pr-info-line">* sign-in as Admin (admin@admin.com : admin) then view Companies'/Customers' credentials to sign-in as</div>
                     </div>
                     <a className="pr-lnk" href="https://couponinja-723-fe.oa.r.appspot.com"
-                        target={"_blank"} title={t("projects.link.title")}>
+                        target={"_blank"} title={t("projects.link.title_site")}>
                         <MdDoubleArrow size={36} />
                     </a>
                 </div>
@@ -46,12 +47,39 @@ function Projects(): JSX.Element {
                         <div className="pr-info-line">* sign-in as Admin (admin@admin.com : admin) then view Users' credentials to sign-in as</div>
                     </div>
                     {/* <a className="pr-lnk" href="#"
-                        target={"_blank"} title={t("projects.link.title")}>
+                        target={"_blank"} title={t("projects.link.title_site")}>
                         <MdDoubleArrow size={36} />
                     </a> */}
                 </div>
                 <div className="pr-img-container">
                     <img className="pr-img" src={img_taas} alt=".." />
+                </div>
+            </div>
+
+            <div className="card-pr">
+                <div className="pr-details-container">
+                    <div className="pr-title">VaaS</div>
+                    <div className="pr-info overflow-y-scroll">
+                        <div className="pr-info-line">Visits as as a Service (Desktop)</div>
+                        <div className="pr-info-line">* <b>Dynamic-Query-Generator</b> testing tool</div>
+                        <div className="pr-info-line">1. Download & run the <b>docker</b> container locally</div>
+                        <div className="pr-info-line">
+                            2. Visit
+                            &nbsp;<a href="http://localhost:8080/swagger-ui/" target={"_blank"} title={t("projects.link.title_site")}><b>Swagger UI</b></a>
+                            &nbsp; (local HTTP client)
+                        </div>
+                        
+                        <div className="pr-info-line">3. sign-in as Admin (admin : admin) & Have Fun &#128521;</div>
+                        <div className="pr-info-line">* The project is a full capable backend system handling Doctors, Patients, Visits, Drugs (by Manufacturers and Categories)</div>
+                        <div className="pr-info-line">* More capabilities (perhaps a Front UI) to be revealed later</div>
+                    </div>
+                    {/* <a className="pr-lnk" href="#"
+                        target={"_blank"} title={t("projects.link.title_file")}>
+                        <MdDoubleArrow size={36} />
+                    </a> */}
+                </div>
+                <div className="pr-img-container">
+                    <img className="pr-img" src={img_vaas} alt=".." />
                 </div>
             </div>
 
@@ -64,7 +92,7 @@ function Projects(): JSX.Element {
                         <div className="pr-info-line">Deployed@ GCP</div>
                     </div>
                     <a className="pr-lnk" href="https://cats-n-toys-fe.oa.r.appspot.com"
-                        target={"_blank"} title={t("projects.link.title")}>
+                        target={"_blank"} title={t("projects.link.title_site")}>
                         <MdDoubleArrow size={36} />
                     </a>
                 </div>
@@ -82,7 +110,7 @@ function Projects(): JSX.Element {
                         <div className="pr-info-line">Deployed@ GitHub-Pages</div>
                     </div>
                     <a className="pr-lnk" href="https://kfadi.github.io/koburger/"
-                        target={"_blank"} title={t("projects.link.title")}>
+                        target={"_blank"} title={t("projects.link.title_site")}>
                         <MdDoubleArrow size={36} />
                     </a>
                 </div>
@@ -101,7 +129,7 @@ function Projects(): JSX.Element {
                         <div className="pr-info-line">p.s. english pro-version will be available soon &#128521;</div>
                     </div>
                     <a className="pr-lnk" href={require("../../assets/docs/GCP_by_kFadi.pdf")}
-                        target={"_blank"} title={t("projects.link.title")}>
+                        target={"_blank"} title={t("projects.link.title_file")}>
                         <MdDoubleArrow size={36} />
                     </a>
                 </div>
@@ -119,7 +147,7 @@ function Projects(): JSX.Element {
                         <div className="pr-info-line">| PDF &#127482;&#127480; |</div>
                     </div>
                     {/* <a className="pr-lnk" href={require("../../assets/docs/GHP_by_kFadi.pdf")}
-                        target={"_blank"} title={t("projects.link.title")}>
+                        target={"_blank"} title={t("projects.link.title_file")}>
                         <MdDoubleArrow size={36} />
                     </a> */}
                 </div>
@@ -137,7 +165,7 @@ function Projects(): JSX.Element {
                         <div className="pr-info-line">Deployed@ GCP</div>
                     </div>
                     {/* <a className="pr-lnk" href="#"
-                        target={"_blank"} title={t("projects.link.title")}>
+                        target={"_blank"} title={t("projects.link.title_site")}>
                         <MdDoubleArrow size={36} />
                     </a> */}
                 </div>

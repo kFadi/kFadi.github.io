@@ -100,7 +100,7 @@ function App() {
                 <Modal open={openModal} onClose={() => setOpenModal(false)} date={date} isDark={isDark}/>
                 {/* <a href={require("./assets/docs/KFadi_CV_" + i18n.language + ".pdf")} download> */}
                 {/* <a href={require("./assets/docs/KFadi_CV_" + i18n.language + ".pdf")} target="_blank"> */}
-                <a href={require("./assets/docs/KFadi_CV_en.pdf")} target="_blank">
+                <a href={require("./assets/docs/Kashan_Fadi_823.pdf")} target="_blank">
                   <BsPrinterFill className="menu__icn" title={t("header.print.title")}/>
                   {/* <BsPrinterFill className="menu__icn" title={require(&#127482;&#127480;)}/> */}
                 </a>

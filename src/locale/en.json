@@ -100,7 +100,8 @@
     },
     "projects": {
         "link": {
-            "title": "move.."
+            "title_site": "move to website..",
+            "title_file": "get the file.."
         }
     }
 }

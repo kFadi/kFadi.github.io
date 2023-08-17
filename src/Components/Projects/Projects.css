@@ -171,6 +171,10 @@
         margin-bottom: 0.5rem;    
     }
 
+    .pr-info-line a {
+        color: var(--main-color);
+    }
+
     .pr-lnk {
         left: 0;
         bottom: -0.25rem;
