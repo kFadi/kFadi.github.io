@@ -32,15 +32,15 @@
             "title": "Share!",
             "whatsapp": {
                 "title": "Share via Whatsapp..",
-                "shared_title": "Check That Awesome CV/Portfolio Out:"
+                "shared_title": "Check This Awesome CV/Portfolio Out:"
             },
             "linkedin": {
                 "title": "Share via Linkedin..",
-                "shared_source": "Check That Awesome CV/Portfolio Out:"
+                "shared_source": "Check This Awesome CV/Portfolio Out:"
             },
             "email": {
                 "title": "Share via Email..",
-                "shared_subject": "Check That Out..",
+                "shared_subject": "Check This Out..",
                 "shared_body": "Awesome CV/Portfolio:"
             }
         },

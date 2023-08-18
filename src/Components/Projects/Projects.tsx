@@ -60,7 +60,7 @@ function Projects(): JSX.Element {
                 <div className="pr-details-container">
                     <div className="pr-title">VaaS</div>
                     <div className="pr-info overflow-y-scroll">
-                        <div className="pr-info-line">Visits as as a Service (Desktop)</div>
+                        <div className="pr-info-line">Visits as a Service (Desktop)</div>
                         <div className="pr-info-line">* <b>Dynamic-Query-Generator</b> testing tool</div>
                         <div className="pr-info-line">1. Download & run the <b>docker</b> container locally</div>
                         <div className="pr-info-line">
