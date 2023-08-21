@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bddc4313.css",
-    "main.js": "/static/js/main.a41a5f9c.js",
+    "main.css": "/static/css/main.2d1d6c42.css",
+    "main.js": "/static/js/main.ee368bb4.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/pr_ghp.png": "/static/media/pr_ghp.e4fe40b66ad60ef5ef4f.png",
     "static/media/pr_moodle.png": "/static/media/pr_moodle.e4fe40b66ad60ef5ef4f.png",
@@ -9,18 +9,18 @@
     "static/media/pr_vaas.png": "/static/media/pr_vaas.e4fe40b66ad60ef5ef4f.png",
     "static/media/GCP_by_kFadi.pdf": "/static/media/GCP_by_kFadi.ca9c4fd7ca7ffae0949d.pdf",
     "static/media/pr_couponinja.png": "/static/media/pr_couponinja.db11f983ab745aa88301.png",
-    "static/media/Kashan_Fadi_823.pdf": "/static/media/Kashan_Fadi_823.4e9609de0e5772a6a024.pdf",
+    "static/media/Kashan_Fadi_823.pdf": "/static/media/Kashan_Fadi_823.cb19fa6eb6869f052092.pdf",
     "static/media/pr_koburger.png": "/static/media/pr_koburger.35e74a79e25a6b99a1f8.png",
     "static/media/pr_gcp.png": "/static/media/pr_gcp.4467cee3ccba1233b805.png",
     "static/media/pr_cats_n_toys.png": "/static/media/pr_cats_n_toys.e79b27aeb799fad3e27d.png",
     "static/media/profile.png": "/static/media/profile.58bbdd7b073f3a3435f8.png",
     "index.html": "/index.html",
-    "main.bddc4313.css.map": "/static/css/main.bddc4313.css.map",
-    "main.a41a5f9c.js.map": "/static/js/main.a41a5f9c.js.map",
+    "main.2d1d6c42.css.map": "/static/css/main.2d1d6c42.css.map",
+    "main.ee368bb4.js.map": "/static/js/main.ee368bb4.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bddc4313.css",
-    "static/js/main.a41a5f9c.js"
+    "static/css/main.2d1d6c42.css",
+    "static/js/main.ee368bb4.js"
   ]
 }
