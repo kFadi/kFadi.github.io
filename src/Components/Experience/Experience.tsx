@@ -1,32 +1,29 @@
+import { TfiMore } from "react-icons/tfi";
+import img_css from "../../assets/images/experience/css.png";
+import img_docker from "../../assets/images/experience/docker.png";
+import img_gcp from "../../assets/images/experience/gcp.png";
+import img_github from "../../assets/images/experience/github.png";
+import img_hibernate from "../../assets/images/experience/hibernate.png";
+import img_html from "../../assets/images/experience/html.png";
+import img_intellij from "../../assets/images/experience/intellij.png";
 import img_java from "../../assets/images/experience/java.png";
+import img_javascript from "../../assets/images/experience/javascript.png";
+import img_maven from "../../assets/images/experience/maven.png";
+import img_mvc from "../../assets/images/experience/mvc.png";
+import img_mysql from "../../assets/images/experience/mysql.png";
+import img_npm from "../../assets/images/experience/npm.png";
+import img_postman from "../../assets/images/experience/postman.png";
+import img_react from "../../assets/images/experience/react.png";
+import img_redux from "../../assets/images/experience/redux.png";
+import img_rest from "../../assets/images/experience/rest.png";
 import img_spring from "../../assets/images/experience/spring.png";
 import img_spring_boot from "../../assets/images/experience/spring_boot.png";
 import img_spring_cloud from "../../assets/images/experience/spring_cloud.png";
-import img_html from "../../assets/images/experience/html.png";
-import img_css from "../../assets/images/experience/css.png";
-import img_javascript from "../../assets/images/experience/javascript.png";
-import img_typescript from "../../assets/images/experience/typescript.png";
-import img_react from "../../assets/images/experience/react.png";
-import img_redux from "../../assets/images/experience/redux.png";
-import img_hibernate from "../../assets/images/experience/hibernate.png";
-import img_mysql from "../../assets/images/experience/mysql.png";
-import img_maven from "../../assets/images/experience/maven.png";
-import img_npm from "../../assets/images/experience/npm.png";
-import img_intellij from "../../assets/images/experience/intellij.png";
-import img_vscode from "../../assets/images/experience/vscode.png";
-import img_rest from "../../assets/images/experience/rest.png";
-import img_mvc from "../../assets/images/experience/mvc.png";
-import img_postman from "../../assets/images/experience/postman.png";
 import img_swagger from "../../assets/images/experience/swagger.png";
-import img_github from "../../assets/images/experience/github.png";
-import img_docker from "../../assets/images/experience/docker.png";
-import img_gcp from "../../assets/images/experience/gcp.png";
-import { TfiMore } from "react-icons/tfi";
+import img_typescript from "../../assets/images/experience/typescript.png";
+import img_vscode from "../../assets/images/experience/vscode.png";
 
 import "./Experience.css";
-import { BsGripVertical } from "react-icons/bs";
-import { TbMinusVertical, TbNorthStar } from "react-icons/tb";
-import { CgMoreVertical } from "react-icons/cg";
 
 
 function Experience(): JSX.Element {

@@ -1,17 +1,11 @@
-import me from "../../assets/images/profile.png";
-import { FaGithub, FaLinkedin, FaLinkedinIn } from "react-icons/fa";
-import { ImLinkedin2, ImPhone } from "react-icons/im";
-import { SiGmail } from "react-icons/si";
 import { useTranslation } from "react-i18next";
-import "./Profile.css";
-import { GrLinkedinOption, GrMail, GrMailOption } from "react-icons/gr";
-import { HiMail, HiOutlineMail, HiPhone } from "react-icons/hi";
+import { AiFillStar } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
+import { GrMail } from "react-icons/gr";
+import { HiPhone } from "react-icons/hi";
 import { RiLinkedinFill } from "react-icons/ri";
-import { MdPhone } from "react-icons/md";
-import { AiFillStar, AiTwotoneMail } from "react-icons/ai";
-import { TfiEmail } from "react-icons/tfi";
-import { GoMail } from "react-icons/go";
-import { FiPhoneCall } from "react-icons/fi";
+import me from "../../assets/images/profile.png";
+import "./Profile.css";
 
 function Profile(): JSX.Element {
     
@@ -25,7 +19,7 @@ function Profile(): JSX.Element {
                     <h1 className="profile-header__name">{t("profile.name")}</h1>
                     <h4 className="profile-header__motto">{t("profile.motto")}</h4>
                 </div>
-                <div className="profile-header__img-wrp dsp">
+                <div className="profile-header__img-wrp">
                     <img src={me} alt="Profile image" />
                 </div>
             </div>

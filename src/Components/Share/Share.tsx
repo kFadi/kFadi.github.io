@@ -1,5 +1,5 @@
-import "./Share.css";
-import { useTranslation} from 'react-i18next';
+import { useRef, useState } from "react";
+import { useTranslation } from 'react-i18next';
 import { FaShareAlt } from 'react-icons/fa';
 import {
     EmailIcon,
@@ -9,8 +9,8 @@ import {
     WhatsappIcon,
     WhatsappShareButton
 } from "react-share";
-import { useRef, useState } from "react";
 import useClickOutside from "../../custom/useClickOutside";
+import "./Share.css";
 
 
 function Share(): JSX.Element {
@@ -60,20 +60,6 @@ function Share(): JSX.Element {
                 </EmailShareButton>
                 </div>
             </div>
-
-            {/* <WhatsappShareButton
-                className="share-social share-whatsapp"
-                title={t("header.share.whatsapp.shared_title")}
-                url={sharedUrl}
-            >
-                    <div className="share-social-icon-wrp" title={t("header.share.whatsapp.title")}>
-                        <WhatsappIcon round={true} className="share-social-icon"/>
-                    </div>  
-            </WhatsappShareButton> */}
-
-            
-
-            
 
         </div>
     );

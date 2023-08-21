@@ -1,37 +1,30 @@
 .profile {
 
-    --shd: var(--shd-lengths-touch) var(--shd-clr4);
-    --shd2: var(--shd-lengths-cntr1) var(--shd-clr1);
-    --shd-hvr: var(--shd-lengths-cntr1) var(--shd-clr2);
-    --shd-img: inset 0 0 1rem 0rem var(--profile-img-shd_clr), 0 0 1rem 0.33rem var(--profile-img-shd_clr);
-    --clr: var(--main-clr);
+    --shd: var(--shd-lengths-touch) var(--shd_clr-lt);
+    --shd-img: inset 0 0 10rem 0rem var(--shd_clr-lt), 0 0 1rem 0.11rem var(--shd_clr-lt);
+    --img-brdr_clr: var(--clr);
+    --img-brdr_rds: 50%;
+    --icn-rtt: 5deg;
+    --a_span-clr: var(--clr);
     --clr-acc: var(--clr-acc1);
-    --padding: var(--section-content-padding);
+    --pdng: var(--section-content-padding);
     --trnstn: var(--transition);
     /* - - - */
     width: var(--section-content-width);
-    padding: var(--padding);
+    padding: var(--pdng);
     /* - - - */
-
     --img-sz: 11rem;
     --icn-sz: 2.5rem;
-
+    /* - - - */
     --fnt-xl: var(--fntsz-xl); 
     --fnt-lg: var(--fntsz-lg); 
     --fnt-md: var(--fntsz-md); 
     --fnt-sm: var(--fntsz-sm); 
     --fnt-xs: var(--fntsz-xs); 
-    
     /* - - - */
 
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-
-    /* box-shadow: var(--shd); */
-
-    /* background-color: rgba(227, 227, 227, 0.75); */
 }
 
 /* ***************** */
@@ -67,25 +60,12 @@
 }
 
 .profile-header__motto {
-    
-    /* border: 1px solid red; */
-
     font-size: var(--fnt-lg);
-
-    /* text-align: justify; */
     font-weight: 500;
     flex-wrap: wrap;
-    /* gap:3rem; */
-    /* line-height: 1.77rem; */
     line-height: 2.2rem;
-
-    /* grid-column: 2 / span 2;
-    grid-row: 2; */
 }
 
-.profile:is(.en) .profile-header__motto {
-    /* 15ch / 18ch / 24ch / 33ch / 41ch / 47ch */
-}
 .profile:is(.he) .profile-header__motto {
     /* 12ch /16ch / 22ch / 27ch / 42ch / 47ch */
     line-height: 2.5rem;
@@ -101,7 +81,6 @@
     
     --img-pd: 0.75rem;
     /* - - -  */
-    
     display: grid;
     place-items: center;
 
@@ -110,13 +89,13 @@
     padding: var(--img-pd);
     margin-inline: 3rem;
     
-    border-radius: 50%; 
+    border-radius: var(--img-brdr_rds); 
 }
 .profile:is(.en) .profile-header__img-wrp {
-    border-left: 0.33rem solid var(--clr);
+    border-left: 0.33rem solid var(--img-brdr_clr);
 }
 .profile:not(.en) .profile-header__img-wrp {
-    border-right: 0.33rem solid var(--clr);
+    border-right: 0.33rem solid var(--img-brdr_clr);
 }
 .profile-header__img-wrp::after {
     content: "";
@@ -124,70 +103,41 @@
     width: calc(var(--img-sz) - 2 * var(--img-pd));
     height: calc(var(--img-sz) - 2 * var(--img-pd));
     
-    border-radius: 50%;
+    border-radius: var(--img-brdr_rds);
     transition: var(--trnstn);
     transition-delay: 0.05s;
 }
 
 .profile-header__img-wrp > img {
-    border-radius: 50%;
+    border-radius: var(--img-brdr_rds);
     transition: var(--trnstn);
     width: 100%;
     height:100%;
 }
 
-.profile-header__img-wrp:hover > img {
-    transform: scale(1.025);
-}
-.profile-header__img-wrp:hover::after {
-    box-shadow: var(--shd-img);
-}
-
-/* ***************** */
-
-
 /* ***************** */
 
 .profile-contact {
     width: 60%;
-    /* background-color: aqua; */
     display: flex;
-    /* align-items: center; */
     justify-content: space-evenly;
     justify-self: center;
     flex-wrap: wrap;
-    /* gap:3rem; */
     row-gap: 1rem;
     margin-top: 1.5rem;
-    /* font-size: 1.2rem; */
-    /* border-radius: 1rem; */
-
-    /* width: fit-content; */
-    /* width: clamp(); */
 
     padding-block: 1.5rem;
 
-    /* box-shadow: var(--shd2); */
     border: solid var(--clr-acc);
     border-width: 0.1rem 0 0.1rem 0;
-
-
-
-
-    /* grid-column: 1 / span 3;
-    grid-row: 3; */
-
 }
 
 .profile-contact > a {
     text-decoration: none;    
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     gap:0.5rem;
-    /* width: 30ch; */
     width: clamp(23ch, 20ch + 6vw, 27ch);
-    /* border: 1px solid red; */
 }
 .profile-contact > a > span {
     
@@ -195,153 +145,60 @@
     
     
     position: relative;
-    color: var(--clr);
+    color: var(--a_span-clr);
     transition: var(--trnstn);
 }
 
 .profile-contact > a > .contact-icn {
     width: var(--icn-sz);
     height: var(--icn-sz);
-    /* transition: var(--timing) scale 1s, rotate 0.7s, opacity 0.5s; */
     transition: var(--trnstn);
-    /* background-color: var(--bgclr-icn); */
-    /* padding: 0.1rem; */
     border-radius: 50%;   
     box-shadow: var(--shd); 
     color: white;
     border: 0.15rem solid white;
-
-
-
 }
 .profile-contact > a > .contact-icn:is(.phone) {
     background-color: #313335;
-    /* color: white; */
-    /* border: 0.15rem solid white; */
-
     padding: 0.35rem;
 }
 .profile-contact > a > .contact-icn:is(.email) {
     background-color: #EA4335;
-    /* color: white; */
-    /* border: 0.15rem solid white; */
-
     padding: 0.4rem;
-
 }
 .profile-contact > a > .contact-icn:is(.linkedin) {
     background-color: #0077B5;
-    /* color: white; */
-
-    /* border: 0.15rem solid white; */
-
     padding: 0.45rem;
     padding-right: 0.55rem;
-
 }
 .profile-contact > a > .contact-icn:is(.github) {
     color: #333;
     background-color: white;
     padding: 0.1rem;
     border: none;
-
-
 }
-
-/* - - - */
-
-.profile-contact > a:hover > span  {
-    transition: scale(1.1);
-    /* font-weight: 600; */
-
-}
-.profile:is(.en) .profile-contact > a:hover > .contact-icn {
-    transition: rotate(-5deg) scale(0.9);
-    /* transition: rotate(-5deg); */
-    /* opacity: 0.5; */
-}
-.profile:not(.en) .profile-contact > a:hover > .contact-icn {
-    transition: scale(0.9), rotate(5deg);
-    /* opacity: 0.5; */
-}
-
 
 /* ***************** */
 
 .profile-skills {
-    /* background-color: aqua; */
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     margin-top:1.5rem;
 
-    /* font-size: 1.2rem; */
     font-weight: 500;
-    /* text-align: justify; */
 
     padding: 1.5rem;
-
-    /* transition: var(--trnstn); */
-    /* transition-delay: .1s; */
-    /* grid-column: 1 / span 3;
-    grid-row: 4; */
 }
-/* .profile-skills::before,
-.profile-skills::after {
-    --brdr-w: 0.2rem;
-    content:"";
-    position: absolute;
-    border: solid var(--clr-acc);
-    width: 4rem;
-    height: 3rem;
-    transition: var(--trnstn);
-    transition-delay: .1s;
-}
-.profile-skills::before {
-    border-width: var(--brdr-w) 0 0 var(--brdr-w);
-    top: 0;
-    left: 0;
-}
-.profile-skills::after {
-    border-width: 0 var(--brdr-w) var(--brdr-w) 0;
-    bottom: 0;
-    right: 0;
-}
-.profile-skills:hover::before,
-.profile-skills:hover::after {
-    width: 100%;
-    height: 100%;
-    --brdr-w: 0.0rem;
-    // border-color: var(--clr); //
-    border-color: transparent;
-    border-radius: 1rem;
-}
-.profile-skills:hover {
-    box-shadow: var(--shd-hvr);
-    border-radius: 1rem;
-
-} */
 
 .profile-skills p {
 
-    /* background-color: #eeb6b1; */
-    
-    
-    /* width: 100%; */
-    /* font-size: 1.1rem; */
-    /* text-align:justify; */
     display: flex;
-    /* flex-direction: row; */
-    /* justify-content: center; */
-    /* align-items: flex-start; */
-    /* font-weight: 600; */
     gap: 1rem;
 
     font-size: var(--fnt-md);
-    /* text-align: justify; */
     font-weight: 500;
-    
 }
 
 .skills-icn {
@@ -350,80 +207,64 @@
     min-height: var(--fnt-xs);
     max-width: var(--fnt-xs);
     max-height: var(--fnt-xs);
-    /* height: 100%; */
-    /* margin-inline: 1rem; */
 }
 
 
-/* ***************** */
-
-
-
-
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
 /* @@ phone */
 @media (max-width: 599px) {
+    
     .profile {
-        --img-sz: 9rem;
+        --img-sz: 8rem;
         --icn-sz: 2rem;
-
     }
+
     .profile-contact {
         width: 90%;
     }
+
     .profile-contact > a {
         width: 20ch;
         min-width: 20ch;
-        /* gap:1rem; */
-
-        /* border: 1px solid red ; */
-        
     }
 }
 
-
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
 /* @@ tablet */
 @media (min-width: 600px) and (max-width: 1199px) {
     .profile-contact {
         width: clamp(48ch,48ch + 5vw ,75%);
-        /* width: 77%; */
-        /* gap: 0.5rem; */
-        
     }
     .profile-contact > a {
-        /* width: calc(20ch + 6vw); */
         width: clamp(11ch, 17ch + 7vw, 27ch);
-
-        /* gap:1rem; */
-
-        /* border: 1px solid red ; */
-        
     }
 }
 
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
 /* @@ small */
 @media (max-width: 900px) {
+    
     .profile {
         --img-sz: 10rem;
         --icn-sz: 2.25rem;
-
     }
+    
     .profile-header {
         flex-direction: column-reverse;
-        /* justify-content: flex-start; */
     }
+    
     .profile-header__txt {
         width:100%;
         gap: 1rem;
 
     }
+    
     .profile:not(.en) .profile-header__txt {
         gap:0.7rem;
     }
@@ -431,29 +272,42 @@
     .profile:is(.en) .profile-header__motto {
         line-height: 1.5rem;
     }
+    
     .profile:not(.en) .profile-header__motto {
         line-height: 1.7rem;
     }
 
     .profile-header__img-wrp {
-        border-bottom: 0.33rem solid var(--clr);
+        border-bottom: 0.33rem solid var(--img-brdr_clr);
     }
 
     .profile-contact {
         width: 90%;
     }
-
-
 }
-/* ***************** */
 
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@ phone2 */
-@media (max-width: 599px) {
-    .profile {
-        --img-sz: 8rem;
-    }
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
+/* ##  devices that a mouse is their primary pointing device ( >> can hover ) */
+@media (pointer: fine) {
     
+    .profile-header__img-wrp:hover > img {
+        transform: scale(1.025);
+    }
+
+    .profile-header__img-wrp:hover::after {
+        box-shadow: var(--shd-img);
+    }
+
+    .profile:is(.en) .profile-contact > a:hover > .contact-icn {
+        transform:  scale(0.9) rotate(calc(-1 * var(--icn-rtt)));
+    }
+    .profile:not(.en) .profile-contact > a:hover > .contact-icn {
+        transform: scale(0.9) rotate(var(--icn-rtt));
+    }
+    .profile-contact > a:hover > span  {
+        transform: scale(1.05);
+    
+    }
 }

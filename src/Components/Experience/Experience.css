@@ -8,13 +8,16 @@
     --fnt-xs: var(--fntsz-xs); 
     /* - - - */
     --clr-acc: var(--clr-acc1);
-    --shd-clr: var(--shd-clr2);
+    --shd-clr: var(--shd_clr-lt);
+    --shd-grp: var(--shd-lengths-grp) var(--shd-clr);
+    --shd-grp-hvr: var(--shd-lengths-grp-hvr) var(--shd-clr);
+    --shd-icn: var(--shd-lengths-icn) var(--shd-clr);
+    --shd-icn-hvr: var(--shd-lengths-icn-hvr) var(--shd-clr);
     /* - - - */
     width: var(--section-content-width);
     padding: var(--section-content-padding);
     /* - - - */
 
-    /* --ex-size: 2.5rem; */
     --ex-size: clamp(1.8rem, 0.8rem + 2vw, 2.5rem);
 
     display: grid;
@@ -34,7 +37,7 @@
     align-items: center;
     gap: 0.7rem;
     padding: 0.5rem;
-    box-shadow: 0.1rem 0.1rem 0.5rem var(--shd-clr);
+    box-shadow: var(--shd-grp);
 }
 
 /* __ line __ */
@@ -65,7 +68,6 @@
 
 /* __ title __ */
 .ex-line:first-child {
-    /* font-size: 1.5rem; */
     font-size: var(--fnt-lg);
     font-weight: 500;
     margin-bottom: 0.2rem;
@@ -80,7 +82,6 @@
     margin-right: 0.3rem;
 }
 .ex-line > span > small {
-    /* font-size: 1.3rem; */
     font-size: var(--fnt-md);
     opacity: 0.7;
     font-weight: 300;
@@ -90,7 +91,6 @@
     margin-left: 0.3rem;
 }
 .ex-line > span > strong {
-    /* font-size: 1.7rem; */
     font-size: var(--fnt-lg);
     opacity: 0.7;
     font-weight: 300;
@@ -103,8 +103,6 @@
     
     margin-right: 0.2rem;
 
-    /* width: var(--ex-size);
-    height: var(--ex-size); */
     min-width: var(--ex-size);
     max-width: var(--ex-size);
     min-height: var(--ex-size);
@@ -114,7 +112,7 @@
     place-items: center;
 
     border-radius: 0.25rem;
-    box-shadow: 0.1rem 0.1rem 0.2rem var(--shd-clr);
+    box-shadow: var(--shd-icn);
 }
 .experience img:is(.cr) {
     border-radius: 50%;
@@ -171,26 +169,14 @@
 }
 
 
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
 /* @@ phone */
 @media (max-width: 599px) {
 
     .experience{
-        /* --ex-size: 2.5rem; */
-        /* margin-inline: 0vw; */
-        /* width: min(92vw, 75rem); */
         grid-template-columns: 1fr;
-        /* gap: 1rem; */
-    }
-
-    /* ------------------- */
-
-    /* __ group __ */
-    .experience > div {
-        /* gap: 0.3rem; */
-        /* padding: 0.7rem; */
     }
 
     /* __ line __ */
@@ -255,8 +241,9 @@
     }
 }
 
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
 /* @@ tablet */
 @media (min-width: 600px) and (max-width: 1199px) {
 
@@ -264,15 +251,6 @@
         margin-inline: 2vw;
         width: min(98vw, 50rem);
         grid-template-columns: repeat(2, 1fr);
-        /* gap: 1.2rem; */
-    }
-
-    /* ------------------- */
-
-    /* __ group __ */
-    .experience > div {
-        /* gap: 0.3rem; */
-        /* padding: 0.5rem; */
     }
 
     /* __ line __ */   
@@ -290,21 +268,6 @@
     }
 
     /* ------------------- */
-
-    /* #ex-java {
-        grid-column: 1 / span 2;
-        grid-row: 1;
-    }
-    
-    #ex-orm {
-        grid-column: 1;
-        grid-row: 2;
-    }
-    
-    #ex-dbms {
-        grid-column: 2;
-        grid-row: 2;
-    } */
     
     #ex-front {
         grid-column: 1;
@@ -339,24 +302,15 @@
 
 }
 
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
 /* @@ big desktop */
 @media (min-width: 1600px) {
 
     .experience{
-        /* margin: minmax(16vw, 18rem); */
         width: 80rem;
         grid-template-columns: repeat(5, 1fr);
-        /* gap: 1.4rem; */
-    }
-
-    /* ------------------- */
-
-    /* __ group __ */
-    .experience > div {
-        /* gap: 0.3rem; */
-        /* padding: 0.5rem; */
     }
 
     /* __ line __ */
@@ -421,79 +375,6 @@
     }
 }
 
-
-
-
-/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
-/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
-
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@ phone */
-@media (max-width: 599px) {}
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@ tablet */
-@media (min-width: 600px) and (max-width: 899px) {
-
-}
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@ tablet[+] */
-@media (min-width: 900px) and (max-width: 1199px) {
-
-}
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@ desktop */
-@media (min-width: 1200px) and (max-width: 1799px) {
-
-}
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* @@ desktop[+] */
-@media (min-width: 1800px) {    /*default w/o media queries*/
-
-}
-
-
-/* ############################################### */
-/* ############################################### */
-/* ############################################### */
-/* @@  P R I N T  */
-@media print {
-
-    .prt {
-        visibility: visible;
-      /* position: relative; */
-    }
-    
-    .dsp,
-    .dsp *,
-    .dsp *::before,
-    .dsp *::after {
-        visibility: hidden;
-        position: absolute;
-    }
-    
-    html {
-        font-size: 12px;
-    }
-
-    header {
-        position: sticky;
-    }
-    .printable{
-        visibility: visible;
-    }
-}
-
-
 /* ############################################### */
 /* ############################################### */
 /* ############################################### */
@@ -506,7 +387,7 @@
 
     .experience > div:hover {
         transform: scale(1.02);
-        box-shadow: 0.1rem 0.1rem 0.5rem 0.5rem var(--shd-clr);
+        box-shadow: var(--shd-grp-hvr);
     }
     .experience:has(>div:hover) >div:not(:hover) {
         opacity: 0.75;
@@ -520,27 +401,8 @@
     }
 
     .ex-line img:hover {
-        transform: scale(1.05);
-        box-shadow: 0.15rem 0.15rem 0.25rem 0.1rem var(--shd-clr);
+        transform: scale(1.075);
+        box-shadow: var(--shd-icn-hvr);
     }
 
 }
-
-
-/* ############################################### */
-/* ############################################### */
-/* ############################################### */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-        transition-delay: 0ms !important;
-    }
-}
-
-/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
-/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */

@@ -1,21 +1,37 @@
 
+.brt {
+    --clr-over: var(--shd_clr-drk-tr70);
+    --clr-back: var(--clr-brt0);
+    --clr-front: var(--clr-drk0);
+}
+.drk {
+    --clr-over: var(--shd_clr-brt-tr70);
+    --clr-back: var(--clr-drk0);
+    --clr-front: var(--clr-brt0);
+}
+
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: var(--clr-over);
     z-index: 1000;
 }
 
 .modal {
+    --red: var(--clr-red-brt);
+    --tmng: var(--timing);
+    --shd-hvr: var(--shd-lengths-cntr2) var(--clr-over);
+    /* * * */
     position: fixed;
     top: 50%;
     left: 50%;
+    border-radius: 0.7rem;;
     transform: translate(-50%, -50%);
-    background-color: #ededed;
-    color: #1b1b1b;
+    background-color: var(--clr-back);
+    color: var(--clr-front);
     padding: 4rem;
     z-index: 1000;
 }
@@ -24,13 +40,7 @@
     margin-bottom: 0.5rem;
 }
 
-.drk {
-    background-color: #1b1b1b;
-    color: #ededed;
-}
-
 .modal button {
-
     position: absolute;
     top: -1rem;
     left: 50%;
@@ -38,33 +48,41 @@
 
     overflow: hidden;
 
-    padding: 0.1rem;
-    padding-bottom: 0px;
-
-    /* color: var(--clr-gry-drk); */
+    padding: 0.5rem;
 
     border-color: transparent;
     border-radius: 50%;
 
-    /* * * */
-    
+    background-color: var(--clr-back);
+
+    transition: 1s var(--tmng), color .75s ease-in-out;
+
+    display: grid;
+    place-items: center;
 
 }
 
 #modal__icn {
-    color: #ff4848;
-    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1), color 1.5s;
+    color: var(--red);
+    transition: 1s var(--tmng), color .75s ease-in-out;
+    animation: pulse-eff 1s infinite linear;
 }
 
-#modal__icn:hover {
-
-    /* background-color: #ff4848;
-    color: #ededed; */
-
-    transform: scale(1.25);
-    color: #de4141;
-
-    cursor: pointer;
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
+/* ##  devices that a mouse is their primary pointing device ( >> can hover ) */
+@media (pointer: fine) {
     
+    #modal__icn:hover {
+        transform: scale(1.33);
+        color:  var(--clr-back);
+        animation: none;
+        cursor: pointer;
+    }
+    
+    .modal button:has(#modal__icn:hover) {
+        background-color: var(--red);
+        box-shadow: var(--shd-hvr);
+    }
 }
-

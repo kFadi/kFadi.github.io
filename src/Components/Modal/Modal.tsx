@@ -1,15 +1,13 @@
 import ReactDOM from "react-dom";
-import "./Modal.css";
-import { GrFormClose } from "react-icons/gr";
-import { IoMdCloseCircle } from "react-icons/io";
 import { useTranslation } from "react-i18next";
+import { IoMdCloseCircle } from "react-icons/io";
+import "./Modal.css";
 
 interface ModalProps {
 	open: boolean;
     onClose: Function;
     date: string;
     isDark: boolean;
-    // children: any;
 }
 
 function Modal(props: ModalProps): JSX.Element {
@@ -18,8 +16,8 @@ function Modal(props: ModalProps): JSX.Element {
     
     return ReactDOM.createPortal(
         <>
-            <div className="overlay"/>
-            <div className={"modal" + (props.isDark? " drk":"")}>
+            <div className={"overlay " + (props.isDark? "drk":"brt")}/>
+            <div className={"modal " + (props.isDark? "drk":"brt")}>
                 <button onClick={()=>{props.onClose()}}>
                     <IoMdCloseCircle size={36} id="modal__icn" title={t("header.info.close")}/>
                 </button>
@@ -30,7 +28,6 @@ function Modal(props: ModalProps): JSX.Element {
                     <div className="modal__line"> {<br/>} Deployed @ <b>GitHub-Pages</b>  </div>
 
                 </div>
-                {/* {props.children} */}
             </div>
         </>,
         document.getElementById("portal")!

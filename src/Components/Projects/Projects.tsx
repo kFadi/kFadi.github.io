@@ -1,22 +1,22 @@
-import img_couponinja from "../../assets/images/projects/pr_couponinja.png";
-import img_taas from "../../assets/images/projects/pr_taas.png";
-import img_vaas from "../../assets/images/projects/pr_vaas.png";
 import img_cats_n_toys from "../../assets/images/projects/pr_cats_n_toys.png";
-import img_koburger from "../../assets/images/projects/pr_koburger.png";
+import img_couponinja from "../../assets/images/projects/pr_couponinja.png";
 import img_gcp from "../../assets/images/projects/pr_gcp.png";
 import img_ghp from "../../assets/images/projects/pr_ghp.png";
+import img_koburger from "../../assets/images/projects/pr_koburger.png";
 import img_moodle from "../../assets/images/projects/pr_moodle.png";
+import img_taas from "../../assets/images/projects/pr_taas.png";
+import img_vaas from "../../assets/images/projects/pr_vaas.png";
 
 import { useTranslation } from "react-i18next";
-import "./Projects.css";
 import { MdDoubleArrow } from "react-icons/md";
+import "./Projects.css";
 
 function Projects(): JSX.Element {
 
     const [t, i18n ] = useTranslation();
     
     return (
-        <div className="Projects flex flx-row-wrap flx-center">
+        <div className="projects flex flx-row-wrap flx-center">
             
             <div className="card-pr">
                 <div className="pr-details-container">

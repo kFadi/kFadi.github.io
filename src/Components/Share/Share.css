@@ -3,12 +3,15 @@
     --share-h: var(--header-item-height);
     --ofst: var(--header-item-offset);
     --brdr-rds: var(--header-item-border_radius);
-    --shd: var(--shd-lengths-touch) var(2--shd-clr4);
-    --shd-hvr: var(--shd-lengths-cntr3) var(--shd-clr4);
-    --bgclr: var(--header-item-bgclr);
-    --cvr-clr-acc: var(--header-menu-acc_clr);
-    --cvr-clr: var(--share-cvr-clr);
-    --cvr-bgclr: var(--share-cvr-bgclr);
+    /* - - - */
+    --shd: var(--shd-lengths-touch) var(--shd_clr);
+    --shd-hvr: var(--shd-lengths-cntr2) var(--shd_clr);
+    /* - - - */
+    --cvr-bgclr: var(--clr-drk1);
+    --cvr-clr: var(--clr-brt1);
+    --cntnt-bgclr: var(--bgclr);
+    --clr-acc: var(--clr-acc1);
+    /* - - - */
     --trnstn: var(--transition);
     /* - - - */
     --icn-sz: calc(var(--share-h) - var(--ofst));
@@ -43,9 +46,7 @@
 .share:is(.ar) {
     --cvr-txt-ch_length: 8ch;
 }
-.share:hover {
-    box-shadow: var(--shd-hvr);
-}
+
 
 /* # ## ### ## # */
 /* # ## ### ## # */
@@ -60,7 +61,6 @@
     height: 100%;
 
     background-color: var(--cvr-bgclr);
-    color: var(--cvr-clr);
     border-radius: var(--brdr-rds);
 
     cursor: pointer;
@@ -80,7 +80,7 @@
     --cvr-delay: .4s;
     /* -- */
     
-    transition: var(--trnstn), border-radius .6s ease-in-out ;
+    transition: var(--trnstn), border-radius .6s ease-in-out, background-color 1s ease-in-out;
     transition-delay: var(--cvr-delay);
 }
 .share:is(.he) .share-cover,
@@ -91,7 +91,7 @@
 /* # ## ### ## # */
 
 .share-cover__icn {
-    color: var(--cvr-clr-acc);
+    color: var(--clr-acc);
     width: var(--cvr-icn-sz);
     height: var(--cvr-icn-sz);
     
@@ -100,7 +100,7 @@
     top: var(--cvr-icn-top);
 
     transform: scaleX(var(--x-factor));
-    transition: var(--trnstn);
+    transition: var(--trnstn), color .85s ease-in-out;
     transition-delay: calc( var(--cvr-delay) + 0.1s);
 }
 
@@ -110,6 +110,7 @@
     position: absolute;
     left: var(--cvr-txt-lft);
     top: var(--cvr-txt-top);
+    color: var(--cvr-clr);
     
     transition: var(--trnstn);
 }
@@ -123,10 +124,11 @@
     transform: translateX(var(--cvr-trnslt-x));
     border-radius: 0;
     transition-delay: 0s;
+    background-color: var(--clr-acc);
 }
 
 .share-cover:is(.opened) .share-cover__icn {
-    color: var(--cvr-clr);
+    color: var(--cntnt-bgclr);
     transform: translateX(var(--cvr-icn-trnslt-x)) scaleX(var(--x-factor));
 }
 
@@ -144,7 +146,7 @@
     height: 100%;
     padding-left: calc( var(--cvr-icn-sz) + 2 * var(--cvr-icn-mrgn));
 
-    background-color: var(--bgclr);
+    background-color: var(--cntnt-bgclr);
 
     display: flex;
     justify-content: space-evenly;
@@ -186,7 +188,8 @@
     transform: translateX(calc(var(--x-factor) * 0.75 * var(--share-w)));
 }
 
-.share:has(.share-cover:is(.opened)) .share-item__icn {
+/* .share:has(.share-cover:is(.opened)) .share-item__icn { */
+.share-cover:is(.opened) + .share-content .share-item__icn {
     transform: translateX(0);
 }
 
@@ -198,4 +201,15 @@
 }
 .share-item__icn:is(.email) {
     transition-delay: var(--delay-email);
+}
+
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
+/* ##  devices that a mouse is their primary pointing device ( >> can hover ) */
+@media (pointer: fine) {
+    
+    .share:hover {
+        box-shadow: var(--shd-hvr);
+    }
 }

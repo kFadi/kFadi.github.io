@@ -2,10 +2,8 @@ import img_jo from "../../assets/images/education/ed_john_bryce.png";
 import img_ne from "../../assets/images/education/ed_netanya_academic.png";
 import img_te from "../../assets/images/education/ed_technion.png";
 
-import { useTranslation} from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import "./Education.css";
-import { Fragment } from "react";
-import FrameShot from "../FrameShot/FrameShot";
 
 function Education(): JSX.Element {
 

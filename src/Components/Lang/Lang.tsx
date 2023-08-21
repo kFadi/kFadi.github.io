@@ -31,7 +31,7 @@ function Lang(): JSX.Element {
             <div className={"lang-content" + (open? " show":"")}>
                 { (i18n.language!=="en") && (<div className="lang-content__itm" onClick={() => changeLang("en")}>English</div>) }
                 { (i18n.language!=="he") && (<div className="lang-content__itm"  onClick={() => changeLang("he")}>עברית</div>) }
-                { (i18n.language!=="ar") && (<div className="lang-content__itm ar"  onClick={() => changeLang("ar")}>العربيّة</div>) }
+                { (i18n.language!=="ar") && (<div className="lang-content__itm"  onClick={() => changeLang("ar")}>العربيّة</div>) }
             </div>
         </div>
     );

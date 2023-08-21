@@ -1,15 +1,15 @@
 .lang {
-    
+    /* - - - */
     --lang-h: var(--header-item-height);
     --lang-w: var(--header-item-width);
     --ofst: var(--header-item-offset);
     --brdr-rds: var(--header-item-border_radius);
-    --shd: var(--shd-lengths-touch) var(--shd-clr4);
-    --shd-hvr: var(--shd-lengths-cntr3) var(--shd-clr4);
-    --bgclr: var(--header-item-bgclr);
-    --clr: var(--header-item-clr);
-    --clr-acc: var(--header-menu-acc_clr);
-    --clr-itm-hvr: var(--header-menu-hvr_clr);
+    --shd: var(--shd-lengths-touch) var(--shd_clr);
+    --shd-hvr: var(--shd-lengths-cntr2) var(--shd_clr);
+    --bg_clr: var(--bgclr);
+    --clr1: var(--clr);
+    --clr-acc: var(--clr-acc1);
+    --clr-itm-hvr: var(--clr-acc1-tr);
     --trnstn: var(--transition);
     /* - - - */
     --icn-sz: calc(var(--lang-h) - 2*var(--ofst) );
@@ -31,8 +31,8 @@
     height: 100%;
     overflow: hidden;
 
-    background-color: var(--bgclr);
-    color: var(--clr);
+    background-color: var(--bg_clr);
+    color: var(--clr1);
     
     cursor: pointer;
     border-radius: var(--brdr-rds);
@@ -40,9 +40,7 @@
 
     transition: all var(--trnstn);
 }
-.lang-trigger:hover {
-    box-shadow: var(--shd-hvr);
-}
+
 
 .lang-trigger__icn1 {
     
@@ -113,7 +111,7 @@
     height: var(--cntnt-h);
     width: var(--cntnt-w);
     
-    color: var(--clr);
+    color: var(--clr1);
     background-color: var(--clr-acc);
     
     display: flex;
@@ -139,7 +137,7 @@
     transform: scale(1) translate(var(--mv-right), var(--mv-top));
     transform-origin: top center ;
     
-    background-color: var(--bgclr);
+    background-color: var(--bg_clr);
 }
 
 .lang-content__itm {
@@ -154,7 +152,20 @@
 
     transition: var(--trnstn);
 }
-.lang-content__itm:hover {
-    cursor: pointer;
-    background-color: var(--clr-itm-hvr);
+
+
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
+/* ##  devices that a mouse is their primary pointing device ( >> can hover ) */
+@media (pointer: fine) {
+
+    .lang-trigger:hover {
+        box-shadow: var(--shd-hvr);
+    }
+
+    .lang-content__itm:hover {
+        cursor: pointer;
+        background-color: var(--clr-itm-hvr);
+    }
 }

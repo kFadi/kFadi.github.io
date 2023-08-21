@@ -1,21 +1,17 @@
 .education {
 
-    /* --bg:var(--clr-brt1-tr); */
-    --bgclr: var(--edu-bgclr);
-    /* --bg: rgba(237, 237, 237, 0.66); */
-    --bg: linear-gradient(var(--bgclr), rgba(237, 237, 237, 0.33));
+    --bg: var(--edu-bg);
+    --bg_clr: var(--bgclr);
     --ofst: 0.15rem;
     --brdr-rds: 0.45rem;
     --dstnc: 2rem;
-
-    --shd: var(--shd-lengths-touch) var(--shd-clr4);
-    --shd-hvr: var(--shd-lengths-cntr1) var(--shd-clr2);
-    /* --shd-img: inset 0 0 1rem 0rem var(--profile-img-shd_clr), 0 0 1rem 0.33rem var(--profile-img-shd_clr); */
-    --clr1: var(--main-clr);
-    --clr2: var(--main-clr-tr);
+    /* - - - */
+    --shd: var(--shd-lengths-touch) var(--clr-tr);
+    --shd-hvr: var(--shd-lengths-blur) var(--clr-acc-tr);
+    --clr1: var(--clr);
+    --clr2: var(--clr-tr);
     --clr-acc: var(--clr-acc1);
     --clr-acc-tr: var(--clr-acc1-tr);
-    /* --bgclr-icn: var(--clr-brt1); */
     --trnstn: var(--transition);
     /* - - - */
     --fnt-xl: var(--fntsz-xl); 
@@ -25,19 +21,16 @@
     --fnt-xs: var(--fntsz-xs);
     /* - - - */
     --cntnt-wdth: calc (var(--section-content-width) - 2*var(--section-content-padding));
+    
+    /* - - - */
     /* - - - */
 
     width: var(--section-content-width);
     padding: var(--section-content-padding);
-    
     /* - - - */
-
     --img-sz: 4rem;
     --lbl-sz: calc(var(--img-sz) + 2 * var(--ofst));
-
-    
     /* - - - */
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,11 +42,8 @@
     justify-content: space-evenly;
 }
 
-
 .edu-panels, .panel {
     
-    /* width: 100%; */
-
     padding: var(--dstnc);
 
     display: flex;
@@ -71,26 +61,19 @@
     width: 100%;
 }
 .panel {
-    /* position: absolute; */
-    /* transform: translateY(var(--lbl-sz)); */
     width: var(--cntnt-wdth);
     display: none;
-
 }
 
+/* * * * * * * * */
+/* * * * * * * * */
 
-
-/* * * * * * * * */
-/* * * * * * * * */
-/* * * * * * * * */
 .education input {
     display: none;
 }
 
 .tab {
     position: relative;
-    /* width: calc(var(--img-sz) + 2 * var(--ofst));
-    height: calc(var(--img-sz) + 2 * var(--ofst)); */
     width: var(--lbl-sz);
     height: var(--lbl-sz);
     padding: 0.5rem;
@@ -104,8 +87,6 @@
 }
 
 
-
-
 #rd1:not(:checked) ~ .edu-tabs #tab1,
 #rd2:not(:checked) ~ .edu-tabs #tab2,
 #rd3:not(:checked) ~ .edu-tabs #tab3 {
@@ -116,9 +97,9 @@
 #rd2:checked ~ .edu-tabs #tab2,
 #rd3:checked ~ .edu-tabs #tab3 {
     top: calc(1.5 * var(--ofst));
-    background-color: var(--bgclr);
+    background-color: var(--bg_clr);
     border: var(--ofst) solid var(--clr-acc);
-    border-bottom: var(--ofst) solid var(--bgclr);
+    border-bottom: var(--ofst) solid transparent;
 }
 
 #rd1:checked ~ .edu-panels #panel1,
@@ -126,6 +107,7 @@
 #rd3:checked ~ .edu-panels #panel3 {
     display: flex;
 }
+
 /* * * * * * * * */
 /* * * * * * * * */
 
@@ -174,30 +156,8 @@
     #rd1:not(:checked) ~ .edu-tabs #tab1:hover,
     #rd2:not(:checked) ~ .edu-tabs #tab2:hover,
     #rd3:not(:checked) ~ .edu-tabs #tab3:hover {
-        /* transform: scale(0.8) translateY(calc(-3 * var(--ofst))); */
-        /* transform: scale(0.5) translateY(calc(-3 * var(--ofst))); */
         cursor: pointer;
         transform: scale(0.9);
-        box-shadow: 0rem -0.3rem 0.9rem var(--clr-acc-tr);
-    }
-  
-}
-
-
-/* ############################################### */
-/* ############################################### */
-/* ############################################### */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-        transition-delay: 0ms !important;
+        box-shadow: var(--shd-hvr);
     }
 }
-
-/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */
-/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  */

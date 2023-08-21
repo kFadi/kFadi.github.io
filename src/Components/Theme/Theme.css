@@ -4,9 +4,9 @@
     --theme-w: var(--header-item-width);
     --ofst: var(--header-item-offset);
     --brdr-rds: var(--header-item-border_radius);
-    --shd: var(--shd-lengths-touch) var(--shd-clr4);
-    --shd-hvr: var(--shd-lengths-cntr3) var(--shd-clr4);
-    --bgclr: var(--header-item-bgclr);
+    --shd: var(--shd-lengths-touch) var(--shd_clr);
+    --shd-hvr: var(--shd-lengths-cntr2) var(--shd_clr);
+    --bg_clr: var(--bgclr);
     --trnstn: var(--transition);
     /* - - - */
     --icn-sz: calc(var(--theme-h) - 2 * var(--ofst) );
@@ -31,7 +31,7 @@
     width: 100%;
     height: 100%;
 
-    background-color: var(--bgclr);
+    background-color: var(--bg_clr);
 
     border-radius: var(--brdr-rds);
     
@@ -40,9 +40,6 @@
     cursor: pointer;
 
     transition: var(--trnstn);
-}
-.theme__sld:hover {
-    box-shadow: var(--shd-hvr);
 }
 
 .theme__sld:before {
@@ -59,12 +56,22 @@
 
     background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
     
-    transition: .4s ease;    
+    transition: var(--trnstn);    
 }
 
 .theme__inp:checked + .theme__sld:before {
     left: calc( var(--theme-w) - var(--icn-sz) - 1.125*var(--ofst));
-    background: var(--bgclr);
+    background: var(--bg_clr);
     box-shadow: inset -0.1875rem -0.125rem 0.3125rem -0.125rem #8983f7, inset -0.625rem -0.25rem 0 0 #a3dafb;
-    /* box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb; */
+}
+
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
+/* ##  devices that a mouse is their primary pointing device ( >> can hover ) */
+@media (pointer: fine) {
+
+    .theme__sld:hover {
+        box-shadow: var(--shd-hvr);
+    }
 }
