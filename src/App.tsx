@@ -63,7 +63,7 @@ function App() {
                 <Theme handleChange={handleChangeTheme}/>
                 <Lang />
               </div>
-              <div className={"menu__grp menu__grp-icns " + i18n.language}>
+              <div className={"menu__grp ignore-rtl " + i18n.language}>
                 <div className="menu__icn-wrp">
                   <TiInfoLarge className="menu__icn menu__icn-inf" title={t("header.info.title")}
                     onClick={() => {

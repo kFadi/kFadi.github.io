@@ -7,6 +7,7 @@
     --clr1: var(--clr);
     --clr_acc1: var(--clr-acc1);
     --clr_acc2: var(--clr-acc2);
+    --clr_red: var(--clr-red);
     --section_bg1: var(--section-bg1);
     --section_bg2: var(--section-bg2);
     --brdr-rds: var(--header-item-border_radius);
@@ -114,10 +115,6 @@ nav {
 }
 
 /* * * * * * * * * * * * * */
-
-.menu__grp-icns {
-    direction: ltr;
-}
 
 .menu__icn-wrp {
     display: flex;
@@ -272,7 +269,7 @@ nav:is(.he) a::after {
     .hdr-trigger__icn:is(.opened)::before,
     .hdr-trigger__icn:is(.opened)::after {
 
-        background-color: var(--clr_acc2);
+        background-color: var(--clr_red);
         top: 0;
         transform: rotate(var(--rtt));
     }
@@ -398,7 +395,7 @@ nav:is(.he) a::after {
     .hdr-trigger:has(.hdr-trigger__icn:is(.opened)):hover {
         cursor: pointer;
         border-radius: 50%;
-        outline: 0.25rem solid var(--clr_acc2);
+        outline: 0.25rem solid var(--clr_red);
         padding: 0.5rem;
     }
 
@@ -428,7 +425,7 @@ nav:is(.he) a::after {
     .hdr-trigger:hover .hdr-trigger__icn:is(.opened)::before,
     .hdr-trigger:hover .hdr-trigger__icn:is(.opened)::after {
 
-        background-color: var(--clr_acc2);
+        background-color: var(--clr_red);
         top: 0;
         transform: rotate(var(--rtt));
     }

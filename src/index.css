@@ -180,6 +180,9 @@ html {
   direction: rtl;
   font-family: 'Alexandria', sans-serif;
 }
+.ignore-rtl {
+  direction: ltr;
+}
 
 /* ############################################### */
 /* ############################################### */
