@@ -2,6 +2,7 @@
 
     --hdr-item-width: var(--header-item-width);
     --hdr-item-height: var(--header-item-height);
+    --hdr-height: var(--header-height); 
     --hdr-bgclr: var(--header-bgclr);
     --bg_clr: var(--bgclr);
     --clr1: var(--clr);
@@ -16,7 +17,7 @@
     --shd: var(--shd-lengths-touch) var(--shd_clr);
     --shd-hvr: var(--shd-lengths-cntr2) var(--shd_clr-lt);
     --shd-menu_nav: var(--shd-lengths-cntr1) var(--shd_clr-lt);
-    --hdr-height: calc(2 * var(--hdr-item-height)); 
+    
     /* --- */
     --hdr-gap: 2rem;
     --padding: 8%; 

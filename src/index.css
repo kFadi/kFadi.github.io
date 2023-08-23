@@ -60,6 +60,7 @@
 
   --header-item-height: 2rem;
   --header-item-width: 3.6rem;
+  --header-height: calc(2 * var(--header-item-height)); 
   --header-item-offset: 0.3rem;
   --header-item-border_radius: 1.875rem;    
   
@@ -154,12 +155,12 @@
 html, body, #root, .App {
   height: 100%;
   width: 100%;
-
   letter-spacing: 0.015rem;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding: var(--header-height);
   font-family: 'Rubik', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -260,11 +261,47 @@ html {
 
 /* ############################################### */
 
+/* - - - - - - */
+/* - - - - - - */
+
+.overflow-y-scroll::-webkit-scrollbar {
+  width: 0.3em;
+  /* height: 0.5em; */
+}
+
+.overflow-y-scroll::-webkit-scrollbar-track {
+  /* background: transparent; */
+  border-radius: 100vw;
+  margin-block: 0.5em;
+}
+
+.overflow-y-scroll::-webkit-scrollbar-thumb {
+  background: var(--clr-acc1-tr);
+  /* border: 0.05em solid var(--clr-acc2); */
+  border-radius: 100vw;
+}
+
+/* .overflow-y-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-acc1);
+} */
+
+@supports (scrollbar-color: var(--clr-acc1-tr) transparent) {
+  * {
+    scrollbar-color: var(--clr-acc1-tr) transparent;
+    scrollbar-width: thin;
+  }
+}
+
+/* - - - - - - */
+
 .overflow-y-scroll {
   flex: 1 1 auto;
   overflow-y: auto;
   min-height: 0px;
 } 
+
+/* - - - - - - */
+/* - - - - - - */
 
 /* .overflow-x-scroll {
   max-width: 90%;
